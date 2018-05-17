@@ -28,9 +28,9 @@ class MyOrdersViewController: UIViewController {
         
         // 2.确定所有的子控制器
         var childVcs = [UIViewController]()
-        childVcs.append(UIViewController())
-        childVcs.append(UIViewController())
-        childVcs.append(UIViewController())
+        childVcs.append(TotalTableViewController())
+        childVcs.append(TotalTableViewController())
+        childVcs.append(TotalTableViewController())
      
         
         let contentView = PageContentView(frame: contentFrame, childVcs: childVcs, parentViewController: self)

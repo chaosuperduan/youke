@@ -20,3 +20,4 @@ let kTabbarH : CGFloat = 44
 
 let kScreenW = UIScreen.main.bounds.width
 let kScreenH = UIScreen.main.bounds.height
+let BackColor = UIColor.init(red: 247/255.0, green: 249/255.0, blue: 250/255.0, alpha: 1.0)

@@ -20,6 +20,12 @@
 		59080E3220A93B5E006CC4A0 /* rounderImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59080E3120A93B5E006CC4A0 /* rounderImageView.swift */; };
 		5909B90E20AD6C78008BC975 /* MyOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5909B90D20AD6C78008BC975 /* MyOrdersViewController.swift */; };
 		5909B91020AD743D008BC975 /* TotalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5909B90F20AD743D008BC975 /* TotalTableViewController.swift */; };
+		5909B91620AD7935008BC975 /* OrdersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5909B91420AD7935008BC975 /* OrdersTableViewCell.swift */; };
+		5909B91720AD7935008BC975 /* OrdersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5909B91520AD7935008BC975 /* OrdersTableViewCell.xib */; };
+		5909B91A20AD9708008BC975 /* HotelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5909B91820AD9708008BC975 /* HotelViewController.swift */; };
+		5909B91B20AD9708008BC975 /* HotelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5909B91920AD9708008BC975 /* HotelViewController.xib */; };
+		5909B91E20ADAA5A008BC975 /* IMGCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5909B91C20ADAA5A008BC975 /* IMGCollectionViewCell.swift */; };
+		5909B91F20ADAA5A008BC975 /* IMGCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5909B91D20ADAA5A008BC975 /* IMGCollectionViewCell.xib */; };
 		590F8A0F20AAD2FC00E4A654 /* HomeFootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590F8A0E20AAD2FC00E4A654 /* HomeFootView.swift */; };
 		590F8A1120AAD31800E4A654 /* HomeFootView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 590F8A1020AAD31800E4A654 /* HomeFootView.xib */; };
 		59F4BE4520A960B1003434A9 /* UserCenterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F4BE4420A960B1003434A9 /* UserCenterTableViewController.swift */; };
@@ -106,6 +112,12 @@
 		59080E3120A93B5E006CC4A0 /* rounderImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rounderImageView.swift; sourceTree = "<group>"; };
 		5909B90D20AD6C78008BC975 /* MyOrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOrdersViewController.swift; sourceTree = "<group>"; };
 		5909B90F20AD743D008BC975 /* TotalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalTableViewController.swift; sourceTree = "<group>"; };
+		5909B91420AD7935008BC975 /* OrdersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersTableViewCell.swift; sourceTree = "<group>"; };
+		5909B91520AD7935008BC975 /* OrdersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrdersTableViewCell.xib; sourceTree = "<group>"; };
+		5909B91820AD9708008BC975 /* HotelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelViewController.swift; sourceTree = "<group>"; };
+		5909B91920AD9708008BC975 /* HotelViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HotelViewController.xib; sourceTree = "<group>"; };
+		5909B91C20ADAA5A008BC975 /* IMGCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMGCollectionViewCell.swift; sourceTree = "<group>"; };
+		5909B91D20ADAA5A008BC975 /* IMGCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IMGCollectionViewCell.xib; sourceTree = "<group>"; };
 		590F8A0E20AAD2FC00E4A654 /* HomeFootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFootView.swift; sourceTree = "<group>"; };
 		590F8A1020AAD31800E4A654 /* HomeFootView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeFootView.xib; sourceTree = "<group>"; };
 		59F4BE4420A960B1003434A9 /* UserCenterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCenterTableViewController.swift; sourceTree = "<group>"; };
@@ -253,6 +265,8 @@
 		5909B91120AD7472008BC975 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				5909B91420AD7935008BC975 /* OrdersTableViewCell.swift */,
+				5909B91520AD7935008BC975 /* OrdersTableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -276,6 +290,8 @@
 			children = (
 				59F4BE4F20A980BA003434A9 /* MessageCell.swift */,
 				59F4BE5020A980BA003434A9 /* MessageCell.xib */,
+				5909B91C20ADAA5A008BC975 /* IMGCollectionViewCell.swift */,
+				5909B91D20ADAA5A008BC975 /* IMGCollectionViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -519,6 +535,8 @@
 				59F4BE5320A9835E003434A9 /* MessageTableViewController.swift */,
 				59F4BE5520A987EB003434A9 /* CertificateViewController.swift */,
 				59F4BE5620A987EB003434A9 /* CertificateViewController.xib */,
+				5909B91820AD9708008BC975 /* HotelViewController.swift */,
+				5909B91920AD9708008BC975 /* HotelViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -679,12 +697,15 @@
 			files = (
 				59F4BE4D20A96658003434A9 /* UserImageViewCell.xib in Resources */,
 				59F4BE4920A961B8003434A9 /* UserTableViewCell.xib in Resources */,
+				5909B91F20ADAA5A008BC975 /* IMGCollectionViewCell.xib in Resources */,
 				BF935AB820A59D72002C84CE /* LaunchScreen.storyboard in Resources */,
 				59047D0120AC138900795E13 /* AddressNaviView.xib in Resources */,
 				59047CF720ABDBDA00795E13 /* CityView.xib in Resources */,
 				E5D58ABE20A6EDD400860EB2 /* MineViewController.xib in Resources */,
 				BF935AB520A59D72002C84CE /* Assets.xcassets in Resources */,
 				59F4BE5220A980BA003434A9 /* MessageCell.xib in Resources */,
+				5909B91720AD7935008BC975 /* OrdersTableViewCell.xib in Resources */,
+				5909B91B20AD9708008BC975 /* HotelViewController.xib in Resources */,
 				59F4BE7020AA7E39003434A9 /* AMap.bundle in Resources */,
 				E5A7DBD320A6920A009C941F /* LoginViewControllersViewController.xib in Resources */,
 				BF935ADC20A59DA6002C84CE /* Podfile in Resources */,
@@ -809,9 +830,11 @@
 				E508370B20A5F7EA00B384A2 /* MainTabBarViewController.swift in Sources */,
 				59F4BE5D20A9B53C003434A9 /* PageTitleView.swift in Sources */,
 				59F4BE5720A987EB003434A9 /* CertificateViewController.swift in Sources */,
+				5909B91E20ADAA5A008BC975 /* IMGCollectionViewCell.swift in Sources */,
 				5909B91020AD743D008BC975 /* TotalTableViewController.swift in Sources */,
 				59F4BE5C20A9B53C003434A9 /* PageContentView.swift in Sources */,
 				5909B90E20AD6C78008BC975 /* MyOrdersViewController.swift in Sources */,
+				5909B91620AD7935008BC975 /* OrdersTableViewCell.swift in Sources */,
 				59F4BE4820A961B8003434A9 /* UserTableViewCell.swift in Sources */,
 				59080E3220A93B5E006CC4A0 /* rounderImageView.swift in Sources */,
 				59047CF520ABDBC400795E13 /* CityView.swift in Sources */,
@@ -837,6 +860,7 @@
 				E5D58ABD20A6EDD400860EB2 /* MineViewController.swift in Sources */,
 				59F4BE4520A960B1003434A9 /* UserCenterTableViewController.swift in Sources */,
 				59F4BE4C20A96658003434A9 /* UserImageViewCell.swift in Sources */,
+				5909B91A20AD9708008BC975 /* HotelViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
