@@ -94,6 +94,12 @@ extension MineViewController:UITableViewDataSource,UITableViewDelegate{
             self.present(nav, animated: true, completion: nil)
            }
            break
+       case 3:
+        do {
+            let nav = UINavigationController(rootViewController: MyOrdersViewController())
+            self.present(nav, animated: true, completion: nil)
+        }
+        break
         
        case 4:
          do {

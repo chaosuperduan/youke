@@ -14,3 +14,9 @@ let MainColor = UIColor.init(red: 31/255.0, green: 183/255.0, blue: 136/255.0, a
 let isIphoneX = KScreenH == 812 ? true : false
 let tabBarbottomHeight : CGFloat = isIphoneX ? 34 : 0
 let IPXstatusHeight:CGFloat = isIphoneX ? 24:0
+let kStatusBarH : CGFloat = 20
+let kNavigationBarH : CGFloat = 44
+let kTabbarH : CGFloat = 44
+
+let kScreenW = UIScreen.main.bounds.width
+let kScreenH = UIScreen.main.bounds.height

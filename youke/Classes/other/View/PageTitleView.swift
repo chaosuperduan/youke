@@ -16,7 +16,7 @@ protocol PageTitleViewDelegate : class {
 // MARK:- 定义常量
 private let kScrollLineH : CGFloat = 2
 private let kNormalColor : (CGFloat, CGFloat, CGFloat) = (85, 85, 85)
-private let kSelectColor : (CGFloat, CGFloat, CGFloat) = (255, 128, 0)
+private let kSelectColor : (CGFloat, CGFloat, CGFloat) = (34, 173, 118)
 
 // MARK:- 定义PageTitleView类
 class PageTitleView: UIView {
@@ -37,7 +37,7 @@ class PageTitleView: UIView {
     }()
     fileprivate lazy var scrollLine : UIView = {
         let scrollLine = UIView()
-        scrollLine.backgroundColor = UIColor.orange
+        scrollLine.backgroundColor = MainColor
         return scrollLine
     }()
     

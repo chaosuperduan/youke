@@ -24,6 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().titleTextAttributes = [kCTFontAttributeName as NSAttributedStringKey:UIFont.boldSystemFont(ofSize: 22),kCTForegroundColorAttributeName as NSAttributedStringKey:UIColor.lightGray] as [NSAttributedStringKey : Any]
 
         //UINavigationBar.appearance().tintColor = UIColor.red
+        window?.backgroundColor = UIColor.white
        AMapServices.shared().apiKey = APIKey
        return true
     }
