@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CityView" customModule="youke" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="90" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v7n-LZ-a8C">
+                    <rect key="frame" x="1" y="7" width="60" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="3Eg-cD-hob"/>
+                        <constraint firstAttribute="height" constant="30" id="pMb-7m-5CW"/>
+                    </constraints>
+                    <state key="normal" title="深圳">
+                        <color key="titleColor" red="0.3411764706" green="0.70980392160000005" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </state>
+                    <connections>
+                        <action selector="CityButtonClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="Yn1-yt-NFO"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="load" translatesAutoresizingMaskIntoConstraints="NO" id="ftr-Zl-uSu">
+                    <rect key="frame" x="66" y="19.5" width="10" height="5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="10" id="MJl-Vs-km4"/>
+                        <constraint firstAttribute="height" constant="5" id="V0G-Mk-OLX"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="ftr-Zl-uSu" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="7fF-AD-gME"/>
+                <constraint firstItem="v7n-LZ-a8C" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="1" id="QqG-fd-pYP"/>
+                <constraint firstItem="v7n-LZ-a8C" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="RMp-7j-xQx"/>
+                <constraint firstItem="ftr-Zl-uSu" firstAttribute="leading" secondItem="v7n-LZ-a8C" secondAttribute="trailing" constant="5" id="eRP-F4-zGi"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="CityButton" destination="v7n-LZ-a8C" id="A4M-l9-49r"/>
+            </connections>
+            <point key="canvasLocation" x="390" y="39"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="load" width="10" height="5"/>
+    </resources>
+</document>
