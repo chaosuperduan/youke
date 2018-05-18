@@ -12,6 +12,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterViewController" customModule="youke" customModuleProvider="target">
             <connections>
+                <outlet property="PhoneTF" destination="jkU-Kv-THk" id="sJ1-G4-n0A"/>
+                <outlet property="PwTF" destination="Uwd-tX-Boj" id="CbF-Db-MLb"/>
+                <outlet property="RePwTF" destination="Fkh-qu-ySX" id="QyI-gA-eTL"/>
+                <outlet property="identyTF" destination="WRh-YN-WVr" id="940-LU-U1i"/>
+                <outlet property="sendButton" destination="81A-hr-KWb" id="YfC-yV-UD7"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -27,23 +32,10 @@
                         <constraint firstAttribute="width" constant="375" id="eiY-WU-rGw"/>
                     </constraints>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NLN-Yp-yNA">
-                    <rect key="frame" x="24" y="702" width="327" height="30"/>
-                    <color key="backgroundColor" red="0.12156862745098039" green="0.72156862745098038" blue="0.53725490196078429" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <state key="normal" title="注册">
-                        <color key="titleShadowColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </state>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                            <integer key="value" value="5"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TWD-KF-n4d">
                     <rect key="frame" x="24" y="274" width="327" height="46"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="772-jY-pfU" customClass="rounderImageView" customModule="youke" customModuleProvider="target">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="juxing" translatesAutoresizingMaskIntoConstraints="NO" id="772-jY-pfU" customClass="rounderImageView" customModule="youke" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="327" height="46"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
@@ -70,7 +62,11 @@
                         <constraint firstAttribute="bottom" secondItem="772-jY-pfU" secondAttribute="bottom" id="G2U-DZ-O3V"/>
                         <constraint firstAttribute="bottom" secondItem="jkU-Kv-THk" secondAttribute="bottom" constant="8" id="VxG-MX-dTP"/>
                         <constraint firstAttribute="height" constant="46" id="Wuz-9y-5m4"/>
+                        <constraint firstAttribute="trailing" secondItem="772-jY-pfU" secondAttribute="trailing" id="gm5-UJ-wGY"/>
                         <constraint firstAttribute="trailing" secondItem="jkU-Kv-THk" secondAttribute="trailing" constant="20" id="hq3-e9-Rvg"/>
+                        <constraint firstAttribute="bottom" secondItem="772-jY-pfU" secondAttribute="bottom" id="ihL-3U-cwL"/>
+                        <constraint firstItem="772-jY-pfU" firstAttribute="leading" secondItem="TWD-KF-n4d" secondAttribute="leading" id="nPt-1l-gIS"/>
+                        <constraint firstItem="772-jY-pfU" firstAttribute="top" secondItem="TWD-KF-n4d" secondAttribute="top" id="o3h-6b-w7T"/>
                         <constraint firstItem="772-jY-pfU" firstAttribute="top" secondItem="TWD-KF-n4d" secondAttribute="top" id="quL-DT-AMc"/>
                         <constraint firstItem="772-jY-pfU" firstAttribute="leading" secondItem="TWD-KF-n4d" secondAttribute="leading" id="s6s-mr-nxT"/>
                     </constraints>
@@ -78,7 +74,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BEg-nC-Fda">
                     <rect key="frame" x="24" y="350" width="327" height="46"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ezN-we-Giv">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="juxing" translatesAutoresizingMaskIntoConstraints="NO" id="ezN-we-Giv">
                             <rect key="frame" x="0.0" y="0.0" width="327" height="46"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
@@ -111,11 +107,11 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wid-kc-wXx">
                     <rect key="frame" x="24" y="426" width="327" height="46"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="glb-fh-taL">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="juxing" translatesAutoresizingMaskIntoConstraints="NO" id="glb-fh-taL">
                             <rect key="frame" x="0.0" y="0.0" width="327" height="46"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
-                        <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入手机号码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uwd-tX-Boj">
+                        <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入手机号码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uwd-tX-Boj">
                             <rect key="frame" x="19" y="8" width="288" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <nil key="textColor"/>
@@ -123,7 +119,7 @@
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                     </subviews>
-                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="46" id="d5g-gg-JTh"/>
                     </constraints>
@@ -131,7 +127,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hXA-tc-bJ4">
                     <rect key="frame" x="24" y="502" width="327" height="46"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UXh-GU-2m4">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="juxing" translatesAutoresizingMaskIntoConstraints="NO" id="UXh-GU-2m4">
                             <rect key="frame" x="0.0" y="0.0" width="327" height="46"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
@@ -143,7 +139,7 @@
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                     </subviews>
-                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="46" id="0Sv-KF-1fd"/>
                         <constraint firstAttribute="width" constant="327" id="oRx-Ja-OrZ"/>
@@ -173,7 +169,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="MhV-Ui-NgD" secondAttribute="trailing" constant="30" id="4WG-8X-IVx"/>
                         <constraint firstItem="dRZ-gP-D0D" firstAttribute="leading" secondItem="wYw-te-tF4" secondAttribute="leading" constant="40" id="Euj-rz-4Gz"/>
@@ -183,6 +179,22 @@
                         <constraint firstItem="MhV-Ui-NgD" firstAttribute="top" secondItem="wYw-te-tF4" secondAttribute="top" constant="5" id="vs7-HW-NqN"/>
                     </constraints>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NLN-Yp-yNA">
+                    <rect key="frame" x="24" y="675" width="327" height="40"/>
+                    <color key="backgroundColor" red="0.12156862745098039" green="0.72156862745098038" blue="0.53725490196078429" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="注册">
+                        <color key="titleShadowColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="Register:" destination="-1" eventType="touchUpInside" id="i1t-Qb-bfu"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -216,5 +228,6 @@
     </objects>
     <resources>
         <image name="header" width="297" height="173"/>
+        <image name="juxing" width="269" height="40"/>
     </resources>
 </document>

@@ -20,14 +20,16 @@
 		59080E3220A93B5E006CC4A0 /* rounderImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59080E3120A93B5E006CC4A0 /* rounderImageView.swift */; };
 		5908F06520AE69DE00A1B53D /* HotelImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5908F06420AE69DE00A1B53D /* HotelImageView.swift */; };
 		5908F06720AE6D8100A1B53D /* HotelImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5908F06620AE6D8100A1B53D /* HotelImageView.xib */; };
+		5908F06A20AE824D00A1B53D /* ImgeViewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5908F06820AE824D00A1B53D /* ImgeViewCollectionViewCell.swift */; };
+		5908F06B20AE824D00A1B53D /* ImgeViewCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5908F06920AE824D00A1B53D /* ImgeViewCollectionViewCell.xib */; };
+		5908F0A720AEB57800A1B53D /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5908F0A620AEB57800A1B53D /* UserAccount.swift */; };
+		5908F0A920AEB60200A1B53D /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5908F0A820AEB60200A1B53D /* String+Extension.swift */; };
 		5909B90E20AD6C78008BC975 /* MyOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5909B90D20AD6C78008BC975 /* MyOrdersViewController.swift */; };
 		5909B91020AD743D008BC975 /* TotalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5909B90F20AD743D008BC975 /* TotalTableViewController.swift */; };
 		5909B91620AD7935008BC975 /* OrdersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5909B91420AD7935008BC975 /* OrdersTableViewCell.swift */; };
 		5909B91720AD7935008BC975 /* OrdersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5909B91520AD7935008BC975 /* OrdersTableViewCell.xib */; };
 		5909B91A20AD9708008BC975 /* HotelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5909B91820AD9708008BC975 /* HotelViewController.swift */; };
 		5909B91B20AD9708008BC975 /* HotelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5909B91920AD9708008BC975 /* HotelViewController.xib */; };
-		5909B91E20ADAA5A008BC975 /* IMGCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5909B91C20ADAA5A008BC975 /* IMGCollectionViewCell.swift */; };
-		5909B91F20ADAA5A008BC975 /* IMGCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5909B91D20ADAA5A008BC975 /* IMGCollectionViewCell.xib */; };
 		590F8A0F20AAD2FC00E4A654 /* HomeFootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590F8A0E20AAD2FC00E4A654 /* HomeFootView.swift */; };
 		590F8A1120AAD31800E4A654 /* HomeFootView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 590F8A1020AAD31800E4A654 /* HomeFootView.xib */; };
 		59F4BE4520A960B1003434A9 /* UserCenterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F4BE4420A960B1003434A9 /* UserCenterTableViewController.swift */; };
@@ -114,14 +116,16 @@
 		59080E3120A93B5E006CC4A0 /* rounderImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rounderImageView.swift; sourceTree = "<group>"; };
 		5908F06420AE69DE00A1B53D /* HotelImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelImageView.swift; sourceTree = "<group>"; };
 		5908F06620AE6D8100A1B53D /* HotelImageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HotelImageView.xib; sourceTree = "<group>"; };
+		5908F06820AE824D00A1B53D /* ImgeViewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgeViewCollectionViewCell.swift; sourceTree = "<group>"; };
+		5908F06920AE824D00A1B53D /* ImgeViewCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImgeViewCollectionViewCell.xib; sourceTree = "<group>"; };
+		5908F0A620AEB57800A1B53D /* UserAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccount.swift; sourceTree = "<group>"; };
+		5908F0A820AEB60200A1B53D /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		5909B90D20AD6C78008BC975 /* MyOrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOrdersViewController.swift; sourceTree = "<group>"; };
 		5909B90F20AD743D008BC975 /* TotalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalTableViewController.swift; sourceTree = "<group>"; };
 		5909B91420AD7935008BC975 /* OrdersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersTableViewCell.swift; sourceTree = "<group>"; };
 		5909B91520AD7935008BC975 /* OrdersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrdersTableViewCell.xib; sourceTree = "<group>"; };
 		5909B91820AD9708008BC975 /* HotelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelViewController.swift; sourceTree = "<group>"; };
 		5909B91920AD9708008BC975 /* HotelViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HotelViewController.xib; sourceTree = "<group>"; };
-		5909B91C20ADAA5A008BC975 /* IMGCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMGCollectionViewCell.swift; sourceTree = "<group>"; };
-		5909B91D20ADAA5A008BC975 /* IMGCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IMGCollectionViewCell.xib; sourceTree = "<group>"; };
 		590F8A0E20AAD2FC00E4A654 /* HomeFootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFootView.swift; sourceTree = "<group>"; };
 		590F8A1020AAD31800E4A654 /* HomeFootView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeFootView.xib; sourceTree = "<group>"; };
 		59F4BE4420A960B1003434A9 /* UserCenterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCenterTableViewController.swift; sourceTree = "<group>"; };
@@ -237,6 +241,7 @@
 		59080E2F20A93AD9006CC4A0 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				5908F0A820AEB60200A1B53D /* String+Extension.swift */,
 				59F4BE6420A9B635003434A9 /* NetworkTools.swift */,
 				59F4BE6020A9B60D003434A9 /* NSDate-Extension.swift */,
 				59F4BE5E20A9B60D003434A9 /* UIBarButtonItem-Extension.swift */,
@@ -294,8 +299,8 @@
 			children = (
 				59F4BE4F20A980BA003434A9 /* MessageCell.swift */,
 				59F4BE5020A980BA003434A9 /* MessageCell.xib */,
-				5909B91C20ADAA5A008BC975 /* IMGCollectionViewCell.swift */,
-				5909B91D20ADAA5A008BC975 /* IMGCollectionViewCell.xib */,
+				5908F06820AE824D00A1B53D /* ImgeViewCollectionViewCell.swift */,
+				5908F06920AE824D00A1B53D /* ImgeViewCollectionViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -514,6 +519,7 @@
 		E5D58AB420A6ED7600860EB2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5908F0A620AEB57800A1B53D /* UserAccount.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -704,7 +710,6 @@
 				59F4BE4D20A96658003434A9 /* UserImageViewCell.xib in Resources */,
 				5908F06720AE6D8100A1B53D /* HotelImageView.xib in Resources */,
 				59F4BE4920A961B8003434A9 /* UserTableViewCell.xib in Resources */,
-				5909B91F20ADAA5A008BC975 /* IMGCollectionViewCell.xib in Resources */,
 				BF935AB820A59D72002C84CE /* LaunchScreen.storyboard in Resources */,
 				59047D0120AC138900795E13 /* AddressNaviView.xib in Resources */,
 				59047CF720ABDBDA00795E13 /* CityView.xib in Resources */,
@@ -717,6 +722,7 @@
 				E5A7DBD320A6920A009C941F /* LoginViewControllersViewController.xib in Resources */,
 				BF935ADC20A59DA6002C84CE /* Podfile in Resources */,
 				590F8A1120AAD31800E4A654 /* HomeFootView.xib in Resources */,
+				5908F06B20AE824D00A1B53D /* ImgeViewCollectionViewCell.xib in Resources */,
 				BF935AB320A59D70002C84CE /* Main.storyboard in Resources */,
 				59F4BE5820A987EB003434A9 /* CertificateViewController.xib in Resources */,
 				E5489D9920A6B71200EFE9A9 /* RegisterViewController.xib in Resources */,
@@ -837,7 +843,6 @@
 				E508370B20A5F7EA00B384A2 /* MainTabBarViewController.swift in Sources */,
 				59F4BE5D20A9B53C003434A9 /* PageTitleView.swift in Sources */,
 				59F4BE5720A987EB003434A9 /* CertificateViewController.swift in Sources */,
-				5909B91E20ADAA5A008BC975 /* IMGCollectionViewCell.swift in Sources */,
 				5909B91020AD743D008BC975 /* TotalTableViewController.swift in Sources */,
 				59F4BE5C20A9B53C003434A9 /* PageContentView.swift in Sources */,
 				5909B90E20AD6C78008BC975 /* MyOrdersViewController.swift in Sources */,
@@ -854,7 +859,9 @@
 				590F8A0F20AAD2FC00E4A654 /* HomeFootView.swift in Sources */,
 				59F4BE7520AA891A003434A9 /* DViewController.m in Sources */,
 				59F4BE5420A9835E003434A9 /* MessageTableViewController.swift in Sources */,
+				5908F0A720AEB57800A1B53D /* UserAccount.swift in Sources */,
 				59047CEC20AAFA4800795E13 /* DEFINE.m in Sources */,
+				5908F0A920AEB60200A1B53D /* String+Extension.swift in Sources */,
 				E5A7DBD220A6920A009C941F /* LoginViewControllersViewController.swift in Sources */,
 				59047CF920AC05F500795E13 /* YkTFView.swift in Sources */,
 				59047CF120AAFDC600795E13 /* YKBatButtonItem+Extension.swift in Sources */,
@@ -864,6 +871,7 @@
 				59F4BE6520A9B635003434A9 /* NetworkTools.swift in Sources */,
 				BF935AB020A59D70002C84CE /* ViewController.swift in Sources */,
 				BF935AAE20A59D70002C84CE /* AppDelegate.swift in Sources */,
+				5908F06A20AE824D00A1B53D /* ImgeViewCollectionViewCell.swift in Sources */,
 				E5D58AC420A6EF8800860EB2 /* HomeViewController.swift in Sources */,
 				E5D58ABD20A6EDD400860EB2 /* MineViewController.swift in Sources */,
 				59F4BE4520A960B1003434A9 /* UserCenterTableViewController.swift in Sources */,
@@ -1051,6 +1059,7 @@
 				);
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/youke/Classes/other/Lib\"";
 				INFOPLIST_FILE = youke/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1061,7 +1070,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "youke/Classes/other/youke-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1079,6 +1088,7 @@
 				);
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/youke/Classes/other/Lib\"";
 				INFOPLIST_FILE = youke/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1088,7 +1098,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "youke/Classes/other/youke-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

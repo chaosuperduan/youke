@@ -48,7 +48,9 @@ class MyOrdersViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+        
     }
+
 }
 extension MyOrdersViewController{
     
@@ -62,8 +64,6 @@ extension MyOrdersViewController{
         
     }
 }
-
-
 extension MyOrdersViewController : PageTitleViewDelegate {
     func pageTitleView(_ titleView: PageTitleView, selectedIndex index: Int) {
         pageContentView.setCurrentIndex(index)

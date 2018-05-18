@@ -26,10 +26,8 @@ class HotelViewController: UIViewController {
 extension HotelViewController{
     
     func setUpUI(){
-      ImgeView.frame = CGRect(x: 0, y: 89+153+10, width: KScreenW, height: 254)
+      ImgeView.frame = CGRect(x: 0, y: 89+153+50, width: KScreenW, height: 300)
       view.addSubview(ImgeView)
-      
     }
-    
-    
 }
+
