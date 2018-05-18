@@ -1,7 +1,6 @@
 //
 //  ViewController.swift
 //  youke
-//
 //  Created by m2m on 2018/5/11.
 //  Copyright © 2018年 M2Micro. All rights reserved.
 //

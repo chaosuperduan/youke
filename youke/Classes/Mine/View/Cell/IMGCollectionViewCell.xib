@@ -19,7 +19,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="301" height="187"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9zo-pX-IKu">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="liuyan" translatesAutoresizingMaskIntoConstraints="NO" id="9zo-pX-IKu">
                         <rect key="frame" x="0.0" y="0.0" width="301" height="187"/>
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mpQ-KX-VdO">
@@ -47,6 +47,7 @@
     </objects>
     <resources>
         <image name="left" width="21" height="34"/>
+        <image name="liuyan" width="888" height="828"/>
         <image name="right" width="21" height="34"/>
     </resources>
 </document>

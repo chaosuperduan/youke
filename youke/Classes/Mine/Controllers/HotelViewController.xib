@@ -96,37 +96,6 @@
                         <constraint firstItem="FyP-EE-5Zc" firstAttribute="top" secondItem="KJN-T4-WhX" secondAttribute="top" id="xkl-q8-OzA"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y9f-3n-vMC">
-                    <rect key="frame" x="0.0" y="178" width="375" height="280"/>
-                    <subviews>
-                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="f9d-tg-NBH">
-                            <rect key="frame" x="0.0" y="59" width="375" height="206"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="X8R-2D-dOg">
-                                <size key="itemSize" width="50" height="50"/>
-                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                            </collectionViewFlowLayout>
-                        </collectionView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="内部图片展示" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="shU-DU-Vzl">
-                            <rect key="frame" x="135" y="15" width="104" height="21"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <color key="textColor" red="0.3411764706" green="0.70980392160000005" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                    </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstAttribute="bottom" secondItem="f9d-tg-NBH" secondAttribute="bottom" constant="15" id="Git-tm-EFj"/>
-                        <constraint firstAttribute="trailing" secondItem="f9d-tg-NBH" secondAttribute="trailing" id="U3s-V0-8sw"/>
-                        <constraint firstItem="f9d-tg-NBH" firstAttribute="leading" secondItem="Y9f-3n-vMC" secondAttribute="leading" id="WN4-We-KVf"/>
-                        <constraint firstItem="f9d-tg-NBH" firstAttribute="top" secondItem="shU-DU-Vzl" secondAttribute="bottom" constant="23" id="afs-eg-QFs"/>
-                        <constraint firstItem="shU-DU-Vzl" firstAttribute="top" secondItem="Y9f-3n-vMC" secondAttribute="top" constant="15" id="b6w-7I-dfd"/>
-                        <constraint firstItem="shU-DU-Vzl" firstAttribute="centerX" secondItem="Y9f-3n-vMC" secondAttribute="centerX" id="g1r-hn-tct"/>
-                        <constraint firstAttribute="height" constant="280" id="iys-eH-G13"/>
-                    </constraints>
-                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7MA-wz-Zlu">
                     <rect key="frame" x="0.0" y="539" width="375" height="108"/>
                     <subviews>
@@ -265,15 +234,12 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="Y9f-3n-vMC" firstAttribute="top" secondItem="KQO-cu-YBU" secondAttribute="bottom" constant="5" id="4VB-2b-u5d"/>
                 <constraint firstItem="7MA-wz-Zlu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="A1W-ID-RiM"/>
                 <constraint firstItem="7MA-wz-Zlu" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="IpK-qy-RRD"/>
                 <constraint firstItem="KQO-cu-YBU" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="THl-Mm-Y1W"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="7MA-wz-Zlu" secondAttribute="bottom" constant="20" id="Tb2-T7-eei"/>
-                <constraint firstItem="Y9f-3n-vMC" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Yqz-0H-rvf"/>
                 <constraint firstItem="KQO-cu-YBU" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="oc8-Uy-sze"/>
                 <constraint firstItem="KQO-cu-YBU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="yt2-jG-lhf"/>
-                <constraint firstItem="Y9f-3n-vMC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ze8-Eg-anC"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

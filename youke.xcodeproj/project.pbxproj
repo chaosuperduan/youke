@@ -18,6 +18,8 @@
 		59047D0120AC138900795E13 /* AddressNaviView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59047D0020AC138900795E13 /* AddressNaviView.xib */; };
 		59047D0420AC46C800795E13 /* POISearchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59047D0320AC46C800795E13 /* POISearchManager.swift */; };
 		59080E3220A93B5E006CC4A0 /* rounderImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59080E3120A93B5E006CC4A0 /* rounderImageView.swift */; };
+		5908F06520AE69DE00A1B53D /* HotelImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5908F06420AE69DE00A1B53D /* HotelImageView.swift */; };
+		5908F06720AE6D8100A1B53D /* HotelImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5908F06620AE6D8100A1B53D /* HotelImageView.xib */; };
 		5909B90E20AD6C78008BC975 /* MyOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5909B90D20AD6C78008BC975 /* MyOrdersViewController.swift */; };
 		5909B91020AD743D008BC975 /* TotalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5909B90F20AD743D008BC975 /* TotalTableViewController.swift */; };
 		5909B91620AD7935008BC975 /* OrdersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5909B91420AD7935008BC975 /* OrdersTableViewCell.swift */; };
@@ -110,6 +112,8 @@
 		59047D0020AC138900795E13 /* AddressNaviView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddressNaviView.xib; sourceTree = "<group>"; };
 		59047D0320AC46C800795E13 /* POISearchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POISearchManager.swift; sourceTree = "<group>"; };
 		59080E3120A93B5E006CC4A0 /* rounderImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rounderImageView.swift; sourceTree = "<group>"; };
+		5908F06420AE69DE00A1B53D /* HotelImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelImageView.swift; sourceTree = "<group>"; };
+		5908F06620AE6D8100A1B53D /* HotelImageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HotelImageView.xib; sourceTree = "<group>"; };
 		5909B90D20AD6C78008BC975 /* MyOrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOrdersViewController.swift; sourceTree = "<group>"; };
 		5909B90F20AD743D008BC975 /* TotalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalTableViewController.swift; sourceTree = "<group>"; };
 		5909B91420AD7935008BC975 /* OrdersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersTableViewCell.swift; sourceTree = "<group>"; };
@@ -517,6 +521,8 @@
 		E5D58AB520A6ED7600860EB2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5908F06620AE6D8100A1B53D /* HotelImageView.xib */,
+				5908F06420AE69DE00A1B53D /* HotelImageView.swift */,
 				59F4BE4E20A980A3003434A9 /* Cell */,
 				59F4BE4620A961B8003434A9 /* UserTableViewCell.swift */,
 				59F4BE4720A961B8003434A9 /* UserTableViewCell.xib */,
@@ -696,6 +702,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				59F4BE4D20A96658003434A9 /* UserImageViewCell.xib in Resources */,
+				5908F06720AE6D8100A1B53D /* HotelImageView.xib in Resources */,
 				59F4BE4920A961B8003434A9 /* UserTableViewCell.xib in Resources */,
 				5909B91F20ADAA5A008BC975 /* IMGCollectionViewCell.xib in Resources */,
 				BF935AB820A59D72002C84CE /* LaunchScreen.storyboard in Resources */,
@@ -839,6 +846,7 @@
 				59080E3220A93B5E006CC4A0 /* rounderImageView.swift in Sources */,
 				59047CF520ABDBC400795E13 /* CityView.swift in Sources */,
 				59047D0420AC46C800795E13 /* POISearchManager.swift in Sources */,
+				5908F06520AE69DE00A1B53D /* HotelImageView.swift in Sources */,
 				59F4BE5120A980BA003434A9 /* MessageCell.swift in Sources */,
 				59F4BE6120A9B60D003434A9 /* UIBarButtonItem-Extension.swift in Sources */,
 				E5489D9820A6B71200EFE9A9 /* RegisterViewController.swift in Sources */,

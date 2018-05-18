@@ -34,7 +34,7 @@
                     </constraints>
                 </imageView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lTl-Ca-8LL">
-                    <rect key="frame" x="0.0" y="252" width="315" height="318"/>
+                    <rect key="frame" x="0.0" y="252" width="315" height="308"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="315" id="RcJ-gs-0Nq"/>
@@ -46,7 +46,7 @@
                     </connections>
                 </tableView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mcb-kM-v6m">
-                    <rect key="frame" x="42" y="598" width="217" height="30"/>
+                    <rect key="frame" x="42" y="588" width="217" height="30"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="L5X-C5-rFx"/>
                     </constraints>
@@ -69,10 +69,10 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JCX-IV-VYd">
-                    <rect key="frame" x="42" y="648" width="217" height="30"/>
+                    <rect key="frame" x="42" y="638" width="217" height="40"/>
                     <color key="backgroundColor" red="0.1215686275" green="0.72156862749999995" blue="0.53725490200000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="30" id="GGY-Yq-T4O"/>
+                        <constraint firstAttribute="height" constant="40" id="GGY-Yq-T4O"/>
                     </constraints>
                     <state key="normal" title="免费注册">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
