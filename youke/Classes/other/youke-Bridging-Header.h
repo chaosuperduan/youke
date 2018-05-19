@@ -11,4 +11,5 @@
 #import"DEFINE.m"
 
 #import <AMapSearchKit/AMapSearchKit.h>
+#import "UIViewController+XHPhoto.h"
 #endif /* officialDemoLoc_Swift_Bridging_Header_h */

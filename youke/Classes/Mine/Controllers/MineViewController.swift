@@ -9,7 +9,8 @@
 import UIKit
 
 class MineViewController: UIViewController {
-
+    @IBOutlet weak var iconImageView: UIImageView!
+    
     @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var nameLabel: UILabel!
@@ -20,12 +21,13 @@ class MineViewController: UIViewController {
                 let a = UserAccount.loadUserAccount()
                 nameLabel.text = UserAccount.account?.nick_Name! as! String
                 loginBTN.setTitle("退出登录", for: .normal)
-                
             }
-            
         }
-        
     }
+    
+    
+    
+    
     var titleArray = ["个人资料","修改密码","实名认证","我的订单","我的消息","关于我们"]
     
     var iconArray = ["edit","edit","setting","orders","message","about"]
@@ -41,7 +43,19 @@ class MineViewController: UIViewController {
     
 
   
+    @IBOutlet weak var loadImageView: UIButton!
     
+    @IBAction func loadImage(_ sender: Any) {
+        
+        
+        self.showCanEdit(true) { (image) in
+            self.iconImageView.image = image
+            
+            
+        }
+        
+        
+    }
     
     
     @IBOutlet weak var registBTN: UIButton!

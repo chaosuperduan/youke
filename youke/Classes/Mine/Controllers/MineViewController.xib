@@ -12,6 +12,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MineViewController" customModule="youke" customModuleProvider="target">
             <connections>
+                <outlet property="iconImageView" destination="dJq-nH-mSd" id="Yqy-2c-6H8"/>
+                <outlet property="loadImageView" destination="TzL-GC-jYa" id="fQy-HJ-l7I"/>
                 <outlet property="loginBTN" destination="Mcb-kM-v6m" id="1eN-wP-gs5"/>
                 <outlet property="nameLabel" destination="Dob-la-zDU" id="UCF-6u-8fI"/>
                 <outlet property="registBTN" destination="JCX-IV-VYd" id="QCa-ts-ZXs"/>
@@ -33,6 +35,12 @@
                         <constraint firstAttribute="width" constant="62" id="pjz-JL-FdO"/>
                         <constraint firstAttribute="height" constant="62" id="zBb-m8-DBh"/>
                     </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="31"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBound" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                 </imageView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lTl-Ca-8LL">
                     <rect key="frame" x="0.0" y="252" width="315" height="298"/>
@@ -94,6 +102,16 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TzL-GC-jYa">
+                    <rect key="frame" x="118" y="119.66666666666669" width="139" height="92"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="139" id="rZ8-1e-dfr"/>
+                        <constraint firstAttribute="height" constant="92" id="vfw-sE-34I"/>
+                    </constraints>
+                    <connections>
+                        <action selector="loadImage:" destination="-1" eventType="touchUpInside" id="W9b-ay-C8s"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -103,13 +121,16 @@
                 <constraint firstItem="Mcb-kM-v6m" firstAttribute="top" secondItem="lTl-Ca-8LL" secondAttribute="bottom" constant="28" id="JOw-pS-Mfn"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="JCX-IV-VYd" secondAttribute="bottom" constant="100" id="OnA-ug-0mF"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Mcb-kM-v6m" secondAttribute="trailing" constant="116" id="Pl1-zC-8Cv"/>
+                <constraint firstItem="TzL-GC-jYa" firstAttribute="centerY" secondItem="uRA-jq-wzX" secondAttribute="centerY" id="QDD-BJ-3zf"/>
                 <constraint firstItem="JCX-IV-VYd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="42" id="Tsf-XD-hcU"/>
                 <constraint firstItem="lTl-Ca-8LL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="UID-db-Hbq"/>
                 <constraint firstItem="dJq-nH-mSd" firstAttribute="centerY" secondItem="uRA-jq-wzX" secondAttribute="centerY" constant="-17.5" id="VJl-u8-9nE"/>
                 <constraint firstItem="uRA-jq-wzX" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="35" id="Y0Z-c7-XTe"/>
                 <constraint firstItem="uRA-jq-wzX" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Y3J-Dc-Ddo"/>
+                <constraint firstItem="TzL-GC-jYa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="118" id="cXB-6X-hcE"/>
                 <constraint firstItem="lTl-Ca-8LL" firstAttribute="top" secondItem="uRA-jq-wzX" secondAttribute="bottom" id="eGF-2h-cQa"/>
                 <constraint firstItem="Dob-la-zDU" firstAttribute="centerX" secondItem="uRA-jq-wzX" secondAttribute="centerX" id="eQc-Kb-eIX"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="TzL-GC-jYa" secondAttribute="trailing" constant="118" id="ehL-cK-FDi"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="JCX-IV-VYd" secondAttribute="trailing" constant="116" id="iSn-28-9T2"/>
                 <constraint firstItem="Dob-la-zDU" firstAttribute="top" secondItem="dJq-nH-mSd" secondAttribute="bottom" constant="16" id="iyP-yM-aQ9"/>
                 <constraint firstItem="dJq-nH-mSd" firstAttribute="centerX" secondItem="uRA-jq-wzX" secondAttribute="centerX" constant="-0.5" id="qQ7-Mw-AXQ"/>
