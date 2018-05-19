@@ -12,25 +12,35 @@ class MineViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    
+    @IBOutlet weak var nameLabel: UILabel!
+    var isLogin:Bool?{
+        didSet{
+            if isLogin!  {
+                
+                let a = UserAccount.loadUserAccount()
+                nameLabel.text = UserAccount.account?.nick_Name! as! String
+                loginBTN.setTitle("退出登录", for: .normal)
+                
+            }
+            
+        }
+        
+    }
     var titleArray = ["个人资料","修改密码","实名认证","我的订单","我的消息","关于我们"]
     
     var iconArray = ["edit","edit","setting","orders","message","about"]
     override func viewDidLoad() {
+        isLogin = UserAccount.isLogin()
         
         self.navigationItem.title = "我的优客"
         super.viewDidLoad()
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "ii")
         self.tableView.tableFooterView = UIView()
     }
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        dismiss(animated: true, completion: nil)
-    }
+    
+    
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+  
     
     
     
@@ -48,12 +58,13 @@ class MineViewController: UIViewController {
     
     
     @IBAction func Login(_ sender: Any) {
-        
-        present(LoginViewController(), animated: true, completion: nil)
-        
-        
+        let vc = LoginViewController()
+        vc.callBack = { ()   in
+            
+            self.isLogin = true
+        }
+        present(vc, animated: true, completion: nil)
     }
-    
 }
 
 extension MineViewController:UITableViewDataSource,UITableViewDelegate{
@@ -74,6 +85,7 @@ extension MineViewController:UITableViewDataSource,UITableViewDelegate{
             cell = UITableViewCell.init(style: .value1, reuseIdentifier: "ii")
         }
         cell.textLabel?.text = titleArray[indexPath.row];
+        cell.textLabel?.textColor = UIColor.gray
         cell.imageView?.image = UIImage(named: iconArray[indexPath.row]);
         return cell
         
@@ -114,7 +126,6 @@ extension MineViewController:UITableViewDataSource,UITableViewDelegate{
         
         }
     }
-    
 }
 
 

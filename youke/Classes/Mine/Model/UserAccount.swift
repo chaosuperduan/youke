@@ -11,16 +11,15 @@ import UIKit
 class UserAccount: NSObject,NSCoding {
     
     
-    var access_token:String?
-    var expires_in:NSNumber?
-    var uid:String?
-    var expires_Date : NSDate?
-    var remind_in: String?
-    {
-        didSet{
-            expires_Date = NSDate.init(timeIntervalSinceNow: TimeInterval.init(truncating: expires_in!))
-        }
-    }
+   @objc var token:String?
+   @objc var role_Id:NSNumber?
+   @objc var nick_Name:String?
+   @objc var user_Id:NSNumber?
+   @objc var login_Type:NSNumber?
+   @objc var age : NSNumber?
+   @objc var phone_Number:String?
+   @objc var user_Pwd:String?
+
     ///  用户头像地址（大图），180×180像素
     var avatar_large: String?
     /// 用户昵称
@@ -35,16 +34,9 @@ class UserAccount: NSObject,NSCoding {
     
     init(dic:[String:AnyObject]) {
         super.init()
-        self.access_token = dic["access_token"] as? String
-        self.remind_in = (dic["remind_in"] as? String)
-        self.expires_in = (dic["expires_in"] as! NSNumber)
-        self.uid = (dic["uid"] as? String)
-        
-        
-//
-//        //super.init()
-        //self.setValuesForKeys
-       //self.setValuesForKeys(dic)
+
+
+       self.setValuesForKeys(dic)
     }
     override func setValue(_ value: Any?, forUndefinedKey key: String) {
         
@@ -60,28 +52,30 @@ class UserAccount: NSObject,NSCoding {
     
     
     func encode(with aCoder: NSCoder) {
+       
+        aCoder.encode(token, forKey: "token")
+        aCoder.encode(user_Id, forKey: "user_Id")
         
-        aCoder.encode(access_token, forKey: "access_token")
-        aCoder.encode(uid, forKey: "uid")
-        aCoder.encode(expires_in, forKey: "expires_in")
-        aCoder.encode(remind_in, forKey: "remind_in")
-        aCoder.encode(expires_Date, forKey: "expires_Date")
-        aCoder.encode(avatar_large, forKey: "avatar_large")
+        aCoder.encode(phone_Number, forKey: "phone_Number")
+        aCoder.encode(role_Id, forKey: "role_Id")
+        aCoder.encode(login_Type, forKey: "login_Type")
+        aCoder.encode(nick_Name, forKey: "nick_Name")
         aCoder.encode(screen_name, forKey: "screen_name")
-        
+        aCoder.encode(user_Pwd, forKey: "user_Pwd")
         
     }
     required init?(coder aDecoder: NSCoder) {
         
-        self.access_token = aDecoder.decodeObject(forKey: "access_token") as? String
+        self.token = aDecoder.decodeObject(forKey: "token") as? String
         
-        self.remind_in = aDecoder.decodeObject(forKey: "remind_in") as? String
-        self.uid = aDecoder.decodeObject(forKey: "uid") as? String
-        self.expires_in = aDecoder.decodeObject(forKey: "expires_in") as? NSNumber
+        self.user_Id = aDecoder.decodeObject(forKey: "user_Id") as? NSNumber
+        self.phone_Number = aDecoder.decodeObject(forKey: "phone_Number") as? String
+        self.login_Type = aDecoder.decodeObject(forKey: "login_Type") as? NSNumber
         
-        self.expires_Date = aDecoder.decodeObject(forKey: "expires_Date") as? NSDate
+        self.nick_Name = aDecoder.decodeObject(forKey: "nick_Name") as? String
         self.avatar_large = aDecoder.decodeObject(forKey: "avatar_large") as? String
         self.screen_name = aDecoder.decodeObject(forKey: "screen_name") as? String
+        self.user_Pwd = aDecoder.decodeObject(forKey: "user_Pwd") as? String
         
     }
     func savaAccout()->Bool{
@@ -106,18 +100,6 @@ class UserAccount: NSObject,NSCoding {
             
         }
         
-//        guard let date = account?.expires_Date else{
-//
-//            return nil
-//        }
-        
-//        if date.compare(NSDate() as Date) == ComparisonResult.orderedAscending{
-//            
-//            
-//            return nil
-//        }
-        
-        
         guard let account = NSKeyedUnarchiver.unarchiveObject(withFile: UserAccount.filePath) as? UserAccount else
         {
             return UserAccount.account
@@ -125,49 +107,13 @@ class UserAccount: NSObject,NSCoding {
         UserAccount.account = account
         
         return UserAccount.account
-        
-        
-        
     }
     
     class func isLogin()->Bool{
-        
-       
-        
         return UserAccount.loadUserAccount() != nil
         
     }
-    /*func loadUserInfo(finished: @escaping (_ account: UserAccount?, _ error: NSError?)->()){
-        
-       assert(access_token != nil,"使用该方法必须现授权")
-        
-       let  path = "2/users/show.json"
-        //准备请求参数。
-        let paramers = ["access_token":access_token!,"uid":uid]
-        NetworkTools.shareInstance.get(path, parameters: paramers, progress: { (progress) in
-            
-            
-        }, success: { (task, obj) in
-            NJLog(message: obj)
-            let dict = obj as! [String: AnyObject]
-            
-            // 1.取出用户信息
-            self.avatar_large = dict["avatar_large"] as? String
-            self.screen_name = dict["screen_name"] as? String
-            
-            // 2.保存授权信息
-            //            self.saveAccount()
-            finished(self, nil)
-            
-            
-            
-            
-        }) { (task, error) in
-            print(error)
-        }
-        
-    }
-    */
+    
 
 }
 

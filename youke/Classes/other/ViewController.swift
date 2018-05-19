@@ -44,7 +44,7 @@ class ViewController: UIViewController {
     
     
     // 最小缩放比例
-    let minProportion: CGFloat = 0.77
+    let minProportion: CGFloat = 1//0.77
 
     override func viewDidLoad() {
         

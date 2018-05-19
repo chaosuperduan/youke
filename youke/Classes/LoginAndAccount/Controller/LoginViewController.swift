@@ -16,10 +16,24 @@ class LoginViewController: UIViewController {
     
     @IBAction func Login(_ sender: Any) {
         
+//        if PwTF.text != RePwTF.text{
+//
+//        }
         
+        let param = NSMutableDictionary()
+        param["userNum"] = PhoneTF.text
+        param["pwd"] = pwTF.text
         
-        
-        
+        NetworkTools.requestData(.post, URLString: "http://192.168.0.222:8080/Maxwell/login/loginUser", parameters: param as? [String : Any]) { (response,mes) in
+            print(response)
+            let account = UserAccount.init(dic: response["data"] as! [String : AnyObject])
+            account.user_Pwd = self.pwTF.text
+            
+            account.savaAccout()
+            
+            self.callBack!()
+           self.dismiss(animated: true, completion: nil)
+        }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,20 +41,24 @@ class LoginViewController: UIViewController {
         
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func back(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
     
+    
+    var  callBack:(()->())?
+   
 
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+extension LoginViewController:UITextFieldDelegate{
+    
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        UIView.animate(withDuration: 0.5) {
+            self.view.frame.origin.y = -200
+            
+        }
     }
-    */
-
+    
 }

@@ -62,13 +62,15 @@ class RegisterViewController: UIViewController {
         }
         
         let param = NSMutableDictionary()
-        param["phoneNumber"] = PhoneTF.text
+        param["phone_Number"] = PhoneTF.text
         param["user_Pwd"] = PwTF.text
+        param["role_Id"] = "8"
+        param["login_Type"] = "72"
         let jsonStr:String = String.getJSONStringFromDictionary(dictionary: param)
         let paramJson = NSMutableDictionary()
         paramJson["user"] = jsonStr
         
-        NetworkTools.requestData(.post, URLString: "http://192.168.0.125:8080/Maxwell/reg/regNewUser", parameters: paramJson as? [String : Any]) { (response) in
+        NetworkTools.requestData(.post, URLString: "http://192.168.0.222:8080/Maxwell/reg/regNewUser", parameters: paramJson as? [String : Any]) { (response,mes) in
             print(response)
             guard let respon :[String:AnyObject]=response as! [String : AnyObject] else{
                 
@@ -84,14 +86,10 @@ class RegisterViewController: UIViewController {
         let param = NSMutableDictionary()
         param["phoneNumber"] = PhoneTF.text
         param["user_Pwd"] = PwTF.text
-        NetworkTools.requestData(.get, URLString: "http://192.168.0.125:8080/Maxwell/verify/sms/reg", parameters: param as? [String : Any]) { (response) in
-            print(response)
-        }
-    
         
+        NetworkTools.requestData(.get, URLString: "http://192.168.0.125:8080/Maxwell/verify/sms/reg", parameters: param as? [String : Any]) { (response, msg) in
+        }
     }
-    
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     

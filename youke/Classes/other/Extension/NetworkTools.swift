@@ -15,31 +15,35 @@ enum MethodType {
 }
 
 class NetworkTools {
-    class func requestData(_ type : MethodType, URLString : String, parameters : [String : Any]? = nil, finishedCallback :  @escaping (_ result : Any) -> ()) {
+    class func requestData(_ type : MethodType, URLString : String, parameters : [String : Any]? = nil, finishedCallback :  @escaping (_ result : [String:AnyObject],_ errorMsg:String?) -> ()) {
         // 1.获取类型
         let method = type == .get ? HTTPMethod.get : HTTPMethod.post
         // 2.发送网络请求
         Alamofire.request(URLString, method: method, parameters: parameters).responseJSON { (response) in
             // 3.获取结果
             guard let result = response.result.value else {
-               print(response.result.error)
+                print(response.result.error ?? "")
                 return
             }
             //处理Unicode编码。将unicode编码的json转成uft8编码
             guard  let data = response.data  else{
-                
-                
+                return
+            }
+            let utf8Text = String(data: data , encoding: .utf8)
+            print(utf8Text ?? "编码错误")
+            guard  let respObj :[String:AnyObject] = result as? [String : AnyObject] else{
                 return
             }
             
-            let utf8Text = String(data: data , encoding: .utf8)
-            print(utf8Text ?? "编码错误")
-            //finishCallBack(result1 as AnyObject)
-            
-            
-            
+            let code:Int = respObj["code"] as! Int
+            if code == 200 {
+                finishedCallback(respObj,respObj["msg"] as? String)
+                
+            }else{
+                
+            }
             // 4.将结果回调出去
-            finishedCallback(result)
+            finishedCallback(respObj , nil)
         }
     }
 }
