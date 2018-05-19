@@ -49,7 +49,7 @@ class MineViewController: UIViewController {
     
     @IBAction func Login(_ sender: Any) {
         
-        
+        present(LoginViewController(), animated: true, completion: nil)
         
         
     }

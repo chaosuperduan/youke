@@ -22,7 +22,7 @@ class RegisterViewController: UIViewController {
     
     var remainingSeconds: Int = 0 {
         willSet {
-            sendButton.setTitle("验证码已发送(\(newValue)秒后重新获取)", for: .normal)
+            sendButton.setTitle("(\(newValue)秒后重新获取)", for: .normal)
             
             if newValue <= 0 {
                 sendButton.setTitle("重新获取验证码", for: .normal)
@@ -34,7 +34,7 @@ class RegisterViewController: UIViewController {
     var isCounting = false {
         willSet {
             if newValue {
-                countdownTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(sendButtonClick(_:)), userInfo: nil, repeats: true)
+                countdownTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime(_:)), userInfo: nil, repeats: true)
                 
                 remainingSeconds = 5
                 
@@ -57,8 +57,24 @@ class RegisterViewController: UIViewController {
     }
 
     @IBAction func Register(_ sender: Any) {
+        if PwTF.text != RePwTF.text{
+            
+        }
         
+        let param = NSMutableDictionary()
+        param["phoneNumber"] = PhoneTF.text
+        param["user_Pwd"] = PwTF.text
+        let jsonStr:String = String.getJSONStringFromDictionary(dictionary: param)
+        let paramJson = NSMutableDictionary()
+        paramJson["user"] = jsonStr
         
+        NetworkTools.requestData(.post, URLString: "http://192.168.0.125:8080/Maxwell/reg/regNewUser", parameters: paramJson as? [String : Any]) { (response) in
+            print(response)
+            guard let respon :[String:AnyObject]=response as! [String : AnyObject] else{
+                
+                return
+            }
+        }
         
         
     }
@@ -67,10 +83,9 @@ class RegisterViewController: UIViewController {
         
         let param = NSMutableDictionary()
         param["phoneNumber"] = PhoneTF.text
-        
-        NetworkTools.requestData(.get, URLString: "http://192.168.0.112:8080/Maxwell/verify/sms/reg", parameters: param as? [String : Any]) { (response) in
+        param["user_Pwd"] = PwTF.text
+        NetworkTools.requestData(.get, URLString: "http://192.168.0.125:8080/Maxwell/verify/sms/reg", parameters: param as? [String : Any]) { (response) in
             print(response)
-            
         }
     
         
@@ -86,9 +101,13 @@ class RegisterViewController: UIViewController {
     @objc func sendButtonClick(_ sender: UIButton) {
         isCounting = true
         getIdentyCode()
+       // NSLog(<#T##format: String##String#>, <#T##args: CVarArg...##CVarArg#>)
+        
+        
+        print("-----***_____")
     }
     
-    func updateTime(_ timer: Timer) {
+    @objc func updateTime(_ timer: Timer) {
         remainingSeconds -= 1
         
     }
@@ -97,20 +116,13 @@ class RegisterViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
 }
-
 extension RegisterViewController{
-    
     func setUpUI(){
         
         sendButton.addTarget(self, action: #selector(sendButtonClick(_:)), for: .touchUpInside)
-        
     }
-    
 }
 extension RegisterViewController:UITextFieldDelegate{
-    
-    
-    
     
     
     
