@@ -35,6 +35,10 @@
 		590F8A1120AAD31800E4A654 /* HomeFootView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 590F8A1020AAD31800E4A654 /* HomeFootView.xib */; };
 		59115BFC20AF022B007B1E62 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59115BFA20AF022B007B1E62 /* LoginViewController.swift */; };
 		59115BFD20AF022B007B1E62 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59115BFB20AF022B007B1E62 /* LoginViewController.xib */; };
+		59F3C0BB20B051EF00F49252 /* FWSideMenuContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F3C0B820B051EF00F49252 /* FWSideMenuContainerViewController.swift */; };
+		59F3C0BC20B051EF00F49252 /* FWSideMenuShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F3C0B920B051EF00F49252 /* FWSideMenuShadow.swift */; };
+		59F3C0BD20B051EF00F49252 /* UIViewController+FWSideMenuExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F3C0BA20B051EF00F49252 /* UIViewController+FWSideMenuExtension.swift */; };
+		59F3C0BF20B0521E00F49252 /* FWNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F3C0BE20B0521E00F49252 /* FWNavigationController.swift */; };
 		59F4BE4520A960B1003434A9 /* UserCenterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F4BE4420A960B1003434A9 /* UserCenterTableViewController.swift */; };
 		59F4BE4820A961B8003434A9 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F4BE4620A961B8003434A9 /* UserTableViewCell.swift */; };
 		59F4BE4920A961B8003434A9 /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59F4BE4720A961B8003434A9 /* UserTableViewCell.xib */; };
@@ -133,6 +137,10 @@
 		590F8A1020AAD31800E4A654 /* HomeFootView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeFootView.xib; sourceTree = "<group>"; };
 		59115BFA20AF022B007B1E62 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		59115BFB20AF022B007B1E62 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		59F3C0B820B051EF00F49252 /* FWSideMenuContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FWSideMenuContainerViewController.swift; sourceTree = "<group>"; };
+		59F3C0B920B051EF00F49252 /* FWSideMenuShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FWSideMenuShadow.swift; sourceTree = "<group>"; };
+		59F3C0BA20B051EF00F49252 /* UIViewController+FWSideMenuExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+FWSideMenuExtension.swift"; sourceTree = "<group>"; };
+		59F3C0BE20B0521E00F49252 /* FWNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FWNavigationController.swift; sourceTree = "<group>"; };
 		59F4BE4420A960B1003434A9 /* UserCenterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCenterTableViewController.swift; sourceTree = "<group>"; };
 		59F4BE4620A961B8003434A9 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		59F4BE4720A961B8003434A9 /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
@@ -236,6 +244,7 @@
 		59047D0220AC2D7C00795E13 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				59F3C0B720B051EF00F49252 /* FWSideMenu */,
 				59094F1D20B03E8E00BE41AD /* UIViewController+XHPhoto.h */,
 				59094F1E20B03E8F00BE41AD /* UIViewController+XHPhoto.m */,
 				59047D0320AC46C800795E13 /* POISearchManager.swift */,
@@ -297,6 +306,16 @@
 			children = (
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		59F3C0B720B051EF00F49252 /* FWSideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				59F3C0B820B051EF00F49252 /* FWSideMenuContainerViewController.swift */,
+				59F3C0B920B051EF00F49252 /* FWSideMenuShadow.swift */,
+				59F3C0BA20B051EF00F49252 /* UIViewController+FWSideMenuExtension.swift */,
+			);
+			path = FWSideMenu;
 			sourceTree = "<group>";
 		};
 		59F4BE4E20A980A3003434A9 /* Cell */ = {
@@ -459,6 +478,7 @@
 			children = (
 				59047D0220AC2D7C00795E13 /* Tool */,
 				59F4BE7120AA83AE003434A9 /* officialDemoLoc-Swift-Bridging-Header.h */,
+				59F3C0BE20B0521E00F49252 /* FWNavigationController.swift */,
 				59F4BE6620AA7C3F003434A9 /* Lib */,
 				59F4BE5920A9B4B8003434A9 /* View */,
 				59080E3020A93AE3006CC4A0 /* Category */,
@@ -846,6 +866,8 @@
 			files = (
 				E571CB0F20A716FC00F6726A /* common.swift in Sources */,
 				E508370B20A5F7EA00B384A2 /* MainTabBarViewController.swift in Sources */,
+				59F3C0BF20B0521E00F49252 /* FWNavigationController.swift in Sources */,
+				59F3C0BC20B051EF00F49252 /* FWSideMenuShadow.swift in Sources */,
 				59F4BE5D20A9B53C003434A9 /* PageTitleView.swift in Sources */,
 				59F4BE5720A987EB003434A9 /* CertificateViewController.swift in Sources */,
 				59115BFC20AF022B007B1E62 /* LoginViewController.swift in Sources */,
@@ -855,6 +877,7 @@
 				5909B91620AD7935008BC975 /* OrdersTableViewCell.swift in Sources */,
 				59F4BE4820A961B8003434A9 /* UserTableViewCell.swift in Sources */,
 				59080E3220A93B5E006CC4A0 /* rounderImageView.swift in Sources */,
+				59F3C0BB20B051EF00F49252 /* FWSideMenuContainerViewController.swift in Sources */,
 				59047CF520ABDBC400795E13 /* CityView.swift in Sources */,
 				59047D0420AC46C800795E13 /* POISearchManager.swift in Sources */,
 				5908F06520AE69DE00A1B53D /* HotelImageView.swift in Sources */,
@@ -867,6 +890,7 @@
 				59F4BE5420A9835E003434A9 /* MessageTableViewController.swift in Sources */,
 				5908F0A720AEB57800A1B53D /* UserAccount.swift in Sources */,
 				59094F1F20B03E8F00BE41AD /* UIViewController+XHPhoto.m in Sources */,
+				59F3C0BD20B051EF00F49252 /* UIViewController+FWSideMenuExtension.swift in Sources */,
 				59047CEC20AAFA4800795E13 /* DEFINE.m in Sources */,
 				5908F0A920AEB60200A1B53D /* String+Extension.swift in Sources */,
 				59047CF920AC05F500795E13 /* YkTFView.swift in Sources */,
