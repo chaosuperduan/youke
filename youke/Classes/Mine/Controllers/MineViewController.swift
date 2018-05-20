@@ -21,6 +21,7 @@ class MineViewController: UIViewController {
                 let a = UserAccount.loadUserAccount()
                 nameLabel.text = UserAccount.account?.nick_Name! as! String
                 loginBTN.setTitle("退出登录", for: .normal)
+                registBTN.isHidden = true
             }
         }
     }

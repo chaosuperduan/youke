@@ -55,7 +55,7 @@
                     </connections>
                 </tableView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mcb-kM-v6m">
-                    <rect key="frame" x="42" y="578" width="217" height="40"/>
+                    <rect key="frame" x="42" y="578" width="263" height="40"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="L5X-C5-rFx"/>
                     </constraints>
@@ -78,7 +78,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JCX-IV-VYd">
-                    <rect key="frame" x="42" y="638" width="217" height="40"/>
+                    <rect key="frame" x="42" y="638" width="263" height="40"/>
                     <color key="backgroundColor" red="0.1215686275" green="0.72156862749999995" blue="0.53725490200000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="GGY-Yq-T4O"/>
@@ -120,7 +120,7 @@
                 <constraint firstItem="uRA-jq-wzX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Fn5-au-OJV"/>
                 <constraint firstItem="Mcb-kM-v6m" firstAttribute="top" secondItem="lTl-Ca-8LL" secondAttribute="bottom" constant="28" id="JOw-pS-Mfn"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="JCX-IV-VYd" secondAttribute="bottom" constant="100" id="OnA-ug-0mF"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Mcb-kM-v6m" secondAttribute="trailing" constant="116" id="Pl1-zC-8Cv"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Mcb-kM-v6m" secondAttribute="trailing" constant="70" id="Pl1-zC-8Cv"/>
                 <constraint firstItem="TzL-GC-jYa" firstAttribute="centerY" secondItem="uRA-jq-wzX" secondAttribute="centerY" id="QDD-BJ-3zf"/>
                 <constraint firstItem="JCX-IV-VYd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="42" id="Tsf-XD-hcU"/>
                 <constraint firstItem="lTl-Ca-8LL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="UID-db-Hbq"/>
@@ -131,7 +131,7 @@
                 <constraint firstItem="lTl-Ca-8LL" firstAttribute="top" secondItem="uRA-jq-wzX" secondAttribute="bottom" id="eGF-2h-cQa"/>
                 <constraint firstItem="Dob-la-zDU" firstAttribute="centerX" secondItem="uRA-jq-wzX" secondAttribute="centerX" id="eQc-Kb-eIX"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="TzL-GC-jYa" secondAttribute="trailing" constant="118" id="ehL-cK-FDi"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="JCX-IV-VYd" secondAttribute="trailing" constant="116" id="iSn-28-9T2"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="JCX-IV-VYd" secondAttribute="trailing" constant="70" id="iSn-28-9T2"/>
                 <constraint firstItem="Dob-la-zDU" firstAttribute="top" secondItem="dJq-nH-mSd" secondAttribute="bottom" constant="16" id="iyP-yM-aQ9"/>
                 <constraint firstItem="dJq-nH-mSd" firstAttribute="centerX" secondItem="uRA-jq-wzX" secondAttribute="centerX" constant="-0.5" id="qQ7-Mw-AXQ"/>
             </constraints>
