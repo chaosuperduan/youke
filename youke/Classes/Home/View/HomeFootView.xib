@@ -38,6 +38,9 @@
                             <state key="normal" title="锦华大厦">
                                 <color key="titleColor" red="0.3411764706" green="0.70980392160000005" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </state>
+                            <connections>
+                                <action selector="addressClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="wby-8S-qMg"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -67,6 +70,9 @@
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="3va-0r-Ayh"/>
+                            </connections>
                         </textField>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="元" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BuZ-jq-jpG">
                             <rect key="frame" x="337" y="15" width="16" height="18"/>
@@ -122,9 +128,12 @@
                                 <constraint firstAttribute="width" constant="70" id="OGX-6U-shl"/>
                                 <constraint firstAttribute="height" constant="30" id="Q3u-cZ-q4l"/>
                             </constraints>
-                            <state key="normal" title="529">
+                            <state key="normal" title="0529">
                                 <color key="titleColor" red="0.3411764706" green="0.70980392160000005" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </state>
+                            <connections>
+                                <action selector="startTimeClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="Mgu-Ex-2ms"/>
+                            </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我离开" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CBt-ID-u1W">
                             <rect key="frame" x="212" y="15" width="59" height="18"/>
@@ -152,6 +161,9 @@
                             <state key="normal" title="0601">
                                 <color key="titleColor" red="0.3411764706" green="0.70980392160000005" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </state>
+                            <connections>
+                                <action selector="endTimeClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="xX9-az-slu"/>
+                            </connections>
                         </button>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="load" translatesAutoresizingMaskIntoConstraints="NO" id="FhT-PN-Pwj">
                             <rect key="frame" x="339" y="22" width="10" height="5"/>
@@ -209,6 +221,12 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="StartBtn" destination="ZQc-JS-5Ue" id="52C-Rf-iYh"/>
+                <outlet property="addressBtn" destination="ubB-Q0-mdH" id="TVv-0Z-bhR"/>
+                <outlet property="endBTN" destination="6lr-wh-Fcg" id="BwE-F1-cK3"/>
+                <outlet property="priceTF" destination="19K-LV-tg2" id="If3-ae-P4B"/>
+            </connections>
             <point key="canvasLocation" x="69.5" y="336.5"/>
         </view>
     </objects>

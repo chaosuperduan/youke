@@ -10,6 +10,8 @@ class AddressViewController: UIViewController {
     
     
      var DataArray:[AMapPOI]! = [AMapPOI]()
+    
+    var callBack:((AMapAOI)->())?
 
     var naviView:AddressNaviView={
         let view = AddressNaviView.LoadFromNib()
@@ -53,7 +55,14 @@ extension AddressViewController{
                         self.DataArray = response.pois
                         self.tableview.reloadData()
                     }
-        
+        }
+        naviView.operation = {(status) in
+            if status {
+                
+            }else{
+               self.navigationController?.popViewController(animated: true)
+                
+            }
         }
         view.addSubview(tableview)
         tableview.delegate = self

@@ -13,6 +13,8 @@ class HomeViewController: UIViewController,AMapLocationManagerDelegate,MAMapView
     let defaultReGeocodeTimeout = 3
     var mapView: MAMapView!
     var displayLabel: UILabel!
+    
+    var poi:AMapAOI?
     var completionBlock: AMapLocatingCompletionBlock!
     var footView:HomeFootView = {
         return HomeFootView.LoadView()
@@ -28,7 +30,6 @@ class HomeViewController: UIViewController,AMapLocationManagerDelegate,MAMapView
     }
   
 }
-
 extension HomeViewController{
     
     func initMapView() {
@@ -39,6 +40,10 @@ extension HomeViewController{
         view.addSubview(mapView)
         view.addSubview(footView)
         footView.frame = CGRect.init(x: 0, y: KScreenH-185-tabBarbottomHeight-44-10-10,width: KScreenW, height:185+tabBarbottomHeight+44+10+10 )
+//        footView.operationBlock = {
+//            in
+//        }
+       
     }
     func configLocationManager() {
         locationManager.delegate = self
@@ -70,7 +75,7 @@ extension HomeViewController{
     }
     @objc func message(){
     navigationController?.pushViewController(AddressViewController(), animated: true)
-       // present(AddressViewController(), animated: true, completion: nil)
+   
     }
 }
 extension  HomeViewController{
