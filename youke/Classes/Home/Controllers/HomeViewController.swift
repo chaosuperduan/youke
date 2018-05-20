@@ -32,13 +32,13 @@ class HomeViewController: UIViewController,AMapLocationManagerDelegate,MAMapView
 extension HomeViewController{
     
     func initMapView() {
-        mapView = MAMapView(frame: CGRect.init(x: 0, y: 64+IPXstatusHeight, width: KScreenW, height: KScreenH-64-185-IPXstatusHeight))
+        mapView = MAMapView(frame: CGRect.init(x: 0, y: 0, width: KScreenW, height: KScreenH-185))
         mapView.delegate = self
         mapView.showsCompass = true
         mapView.isShowsUserLocation = true
         view.addSubview(mapView)
         view.addSubview(footView)
-        footView.frame = CGRect.init(x: 0, y: KScreenH-185-tabBarbottomHeight,width: KScreenW, height:185+tabBarbottomHeight )
+        footView.frame = CGRect.init(x: 0, y: KScreenH-185-tabBarbottomHeight-44-10-10,width: KScreenW, height:185+tabBarbottomHeight+44+10+10 )
     }
     func configLocationManager() {
         locationManager.delegate = self
@@ -54,11 +54,19 @@ extension HomeViewController{
         mapView.setCenter(annotation.coordinate, animated: true)
     }
     func setNavgationBar(){
+        let lfBarItem = UIBarButtonItem.setUpBarButtonItemWithImage(imageName: "liuyan",target: self, action: #selector(leftClick))
         
-      self.navigationItem.leftBarButtonItem = UIBarButtonItem.setUpBarButtonItemWithImage(imageName: "liuyan")
+      self.navigationItem.leftBarButtonItem = lfBarItem
+     
      self.navigationController?.navigationBar.barTintColor = UIColor.white
         navigationItem.rightBarButtonItem = UIBarButtonItem.init(image: UIImage.init(named: "message"), style: .plain, target: self, action: #selector(message))
         self.navigationItem.titleView = CityView.LoadFromNib()
+    }
+    
+    @objc func leftClick(){
+        
+       self.menuContainerViewController.toggleLeftSideMenu(completeBolck: nil)
+        
     }
     @objc func message(){
     navigationController?.pushViewController(AddressViewController(), animated: true)

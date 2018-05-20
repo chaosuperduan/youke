@@ -33,7 +33,8 @@ class MineViewController: UIViewController {
     var iconArray = ["edit","edit","setting","orders","message","about"]
     override func viewDidLoad() {
         isLogin = UserAccount.isLogin()
-        
+        self.iconImageView.layer.cornerRadius = 31
+        self.iconImageView.layer.masksToBounds = true
         self.navigationItem.title = "我的优客"
         super.viewDidLoad()
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "ii")

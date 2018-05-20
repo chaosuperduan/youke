@@ -35,7 +35,7 @@ class FWNavigationController: UINavigationController {
     
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {
         
-        if self.childViewControllers.count > 0 {
+        if self.childViewControllers.count > 1 {
             
             let button = UIButton(type: .custom)
             button.setImage(UIImage(named: "com_arrow_vc_back"), for: .normal)

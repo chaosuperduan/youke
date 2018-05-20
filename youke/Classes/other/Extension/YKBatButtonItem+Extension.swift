@@ -23,7 +23,7 @@ extension NibLoad where Self : UIView
 
 extension UIBarButtonItem{
 
-    class func setUpBarButtonItemWithImage(imageName:String)->UIBarButtonItem {
+    class func setUpBarButtonItemWithImage(imageName:String, target:AnyObject,action:Selector)->UIBarButtonItem {
       
       let imageView:UIImageView = UIImageView.init(frame: CGRect(x: 0, y: -10, width: 44, height: 44))
       imageView.layer.cornerRadius = 22
@@ -39,6 +39,13 @@ extension UIBarButtonItem{
       print(imageView.frame)
         
         
+        let tapGR = UITapGestureRecognizer(target: target, action: action)
+        imageView.addGestureRecognizer(tapGR)
+        
+        //////手势处理函数
+        func tapHandler(sender:UITapGestureRecognizer) {
+            
+        }
         let item = UIBarButtonItem.init(customView: imageView)
         
         return item
