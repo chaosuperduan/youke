@@ -1,4 +1,13 @@
 //
+
+
+
+
+
+
+
+
+
 //  HomeViewController.swift
 //  youke
 //  Created by 振轩 on 2018/5/12.
@@ -13,7 +22,7 @@ class HomeViewController: UIViewController,AMapLocationManagerDelegate,MAMapView
     let defaultReGeocodeTimeout = 3
     var mapView: MAMapView!
     var displayLabel: UILabel!
-    
+    var addressBlock:PassBak?
     var poi:AMapAOI?
     var completionBlock: AMapLocatingCompletionBlock!
     var footView:HomeFootView = {
@@ -40,10 +49,28 @@ extension HomeViewController{
         view.addSubview(mapView)
         view.addSubview(footView)
         footView.frame = CGRect.init(x: 0, y: KScreenH-185-tabBarbottomHeight-44-10-10,width: KScreenW, height:185+tabBarbottomHeight+44+10+10 )
-//        footView.operationBlock = {
-//            in
-//        }
-       
+        footView.operationBlock = {(methodType,str,closureblock)
+            in
+            self.addressBlock = closureblock
+            
+            
+            switch methodType {
+            case .address:do {
+                let vc = AddressViewController()
+                vc.callBack1 = { poi
+                    
+                    in
+                    self.addressBlock!(poi.name)
+                }
+               self.present(vc, animated: true, completion: nil)
+                
+                }
+                break
+                default: break
+                }
+            
+        }
+
     }
     func configLocationManager() {
         locationManager.delegate = self

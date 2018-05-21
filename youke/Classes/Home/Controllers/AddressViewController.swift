@@ -11,7 +11,7 @@ class AddressViewController: UIViewController {
     
      var DataArray:[AMapPOI]! = [AMapPOI]()
     
-    var callBack:((AMapAOI)->())?
+    var callBack1:((AMapPOI)->())?
 
     var naviView:AddressNaviView={
         let view = AddressNaviView.LoadFromNib()
@@ -88,5 +88,17 @@ extension AddressViewController:UITableViewDataSource,UITableViewDelegate{
         cell.textLabel?.textColor = UIColor.gray
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let poi = self.DataArray[indexPath.row]
+        
+        if self.callBack1 != nil  {
+            
+            
+            callBack1!(poi)
+            self.dismiss(animated: true, completion: nil)
+        }
     }
 }
