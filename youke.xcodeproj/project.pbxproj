@@ -79,6 +79,12 @@
 		BF935AC320A59D72002C84CE /* youkeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF935AC220A59D72002C84CE /* youkeTests.swift */; };
 		BF935ACE20A59D72002C84CE /* youkeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF935ACD20A59D72002C84CE /* youkeUITests.swift */; };
 		BF935ADC20A59DA6002C84CE /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = BF935ADB20A59DA6002C84CE /* Podfile */; };
+		E504E07B20B3F95600AC25B3 /* jpush-extension-ios-1.1.1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E504E07620B3F95600AC25B3 /* jpush-extension-ios-1.1.1.a */; };
+		E504E07C20B3F95600AC25B3 /* jcore-ios-1.1.9.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E504E07720B3F95600AC25B3 /* jcore-ios-1.1.9.a */; };
+		E504E07D20B3F95600AC25B3 /* jpush-ios-3.0.9.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E504E07A20B3F95600AC25B3 /* jpush-ios-3.0.9.a */; };
+		E504E07F20B41C2000AC25B3 /* libresolv.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E504E07E20B41C2000AC25B3 /* libresolv.9.tbd */; };
+		E504E08120B41C3B00AC25B3 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E504E08020B41C3A00AC25B3 /* UserNotifications.framework */; };
+		E504E08320B41C5700AC25B3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E504E08220B41C5600AC25B3 /* UIKit.framework */; };
 		E508370B20A5F7EA00B384A2 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E508370A20A5F7EA00B384A2 /* MainTabBarViewController.swift */; };
 		E5489D9820A6B71200EFE9A9 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5489D9620A6B71200EFE9A9 /* RegisterViewController.swift */; };
 		E5489D9920A6B71200EFE9A9 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5489D9720A6B71200EFE9A9 /* RegisterViewController.xib */; };
@@ -192,6 +198,15 @@
 		BF935ACF20A59D72002C84CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF935ADB20A59DA6002C84CE /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		DC4B02D9348CDFBFC016B80C /* Pods-youke.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-youke.debug.xcconfig"; path = "Pods/Target Support Files/Pods-youke/Pods-youke.debug.xcconfig"; sourceTree = "<group>"; };
+		E504E07620B3F95600AC25B3 /* jpush-extension-ios-1.1.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jpush-extension-ios-1.1.1.a"; sourceTree = "<group>"; };
+		E504E07720B3F95600AC25B3 /* jcore-ios-1.1.9.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jcore-ios-1.1.9.a"; sourceTree = "<group>"; };
+		E504E07820B3F95600AC25B3 /* JPushNotificationExtensionService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPushNotificationExtensionService.h; sourceTree = "<group>"; };
+		E504E07920B3F95600AC25B3 /* JPUSHService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPUSHService.h; sourceTree = "<group>"; };
+		E504E07A20B3F95600AC25B3 /* jpush-ios-3.0.9.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jpush-ios-3.0.9.a"; sourceTree = "<group>"; };
+		E504E07E20B41C2000AC25B3 /* libresolv.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.9.tbd; path = usr/lib/libresolv.9.tbd; sourceTree = SDKROOT; };
+		E504E08020B41C3A00AC25B3 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		E504E08220B41C5600AC25B3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E504E08420B41D2000AC25B3 /* youke.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = youke.entitlements; sourceTree = "<group>"; };
 		E508370A20A5F7EA00B384A2 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		E5489D9620A6B71200EFE9A9 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		E5489D9720A6B71200EFE9A9 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
@@ -206,19 +221,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E504E08320B41C5700AC25B3 /* UIKit.framework in Frameworks */,
+				E504E08120B41C3B00AC25B3 /* UserNotifications.framework in Frameworks */,
+				E504E07F20B41C2000AC25B3 /* libresolv.9.tbd in Frameworks */,
 				59F4BE8B20AA8DD0003434A9 /* Security.framework in Frameworks */,
 				59F4BE8920AA8DC4003434A9 /* libstdc++.6.0.9.tbd in Frameworks */,
+				E504E07B20B3F95600AC25B3 /* jpush-extension-ios-1.1.1.a in Frameworks */,
 				59F4BE8720AA8DB4003434A9 /* libc++.tbd in Frameworks */,
 				59F4BE8520AA8DA7003434A9 /* libz.tbd in Frameworks */,
 				59F4BE8320AA8D98003434A9 /* libz.1.2.8.tbd in Frameworks */,
 				59F4BE8120AA8D67003434A9 /* SystemConfiguration.framework in Frameworks */,
 				59F4BE7F20AA8D55003434A9 /* Foundation.framework in Frameworks */,
+				E504E07C20B3F95600AC25B3 /* jcore-ios-1.1.9.a in Frameworks */,
 				59F4BE7D20AA8B75003434A9 /* CFNetwork.framework in Frameworks */,
 				59F4BE7B20AA8A51003434A9 /* CoreLocation.framework in Frameworks */,
 				59F4BE7920AA89FD003434A9 /* CoreTelephony.framework in Frameworks */,
 				EDEACAAA56496BBE79ABF113 /* Pods_youke.framework in Frameworks */,
 				59F4BE7720AA896C003434A9 /* AMapLocationKit.framework in Frameworks */,
 				59F4BE6E20AA7C3F003434A9 /* AMapSearchKit.framework in Frameworks */,
+				E504E07D20B3F95600AC25B3 /* jpush-ios-3.0.9.a in Frameworks */,
 				59F4BE6D20AA7C3F003434A9 /* MAMapKit.framework in Frameworks */,
 				59F4BE6B20AA7C3F003434A9 /* AMapFoundationKit.framework in Frameworks */,
 			);
@@ -386,6 +407,7 @@
 		BF935AAC20A59D70002C84CE /* youke */ = {
 			isa = PBXGroup;
 			children = (
+				E504E08420B41D2000AC25B3 /* youke.entitlements */,
 				E508370420A5F77100B384A2 /* Classes */,
 				BF935AB420A59D72002C84CE /* Assets.xcassets */,
 				BF935AB920A59D72002C84CE /* Info.plist */,
@@ -414,6 +436,9 @@
 		C61C0DD763D895271728213A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E504E08220B41C5600AC25B3 /* UIKit.framework */,
+				E504E08020B41C3A00AC25B3 /* UserNotifications.framework */,
+				E504E07E20B41C2000AC25B3 /* libresolv.9.tbd */,
 				59F4BE8A20AA8DCF003434A9 /* Security.framework */,
 				59F4BE8820AA8DC4003434A9 /* libstdc++.6.0.9.tbd */,
 				59F4BE8620AA8DB4003434A9 /* libc++.tbd */,
@@ -432,8 +457,21 @@
 		E504E07420B3F4CF00AC25B3 /* JPush */ = {
 			isa = PBXGroup;
 			children = (
+				E504E07520B3F95600AC25B3 /* Lib */,
 			);
 			path = JPush;
+			sourceTree = "<group>";
+		};
+		E504E07520B3F95600AC25B3 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				E504E07620B3F95600AC25B3 /* jpush-extension-ios-1.1.1.a */,
+				E504E07720B3F95600AC25B3 /* jcore-ios-1.1.9.a */,
+				E504E07820B3F95600AC25B3 /* JPushNotificationExtensionService.h */,
+				E504E07920B3F95600AC25B3 /* JPUSHService.h */,
+				E504E07A20B3F95600AC25B3 /* jpush-ios-3.0.9.a */,
+			);
+			path = Lib;
 			sourceTree = "<group>";
 		};
 		E508370420A5F77100B384A2 /* Classes */ = {
@@ -701,6 +739,9 @@
 						LastSwiftMigration = 0930;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
 								enabled = 1;
 							};
 						};
@@ -1089,6 +1130,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = youke/youke.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WJ9HX8X6DP;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1102,8 +1144,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/youke/Classes/other/Lib\"";
-				PRODUCT_BUNDLE_IDENTIFIER = com.m2micro.youke;
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SRCROOT)/youke/Classes/other/Lib\"",
+					"$(PROJECT_DIR)/youke/Classes/other/Lib/JPush/Lib",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.m2micro.youke2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "youke/Classes/other/youke-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1118,6 +1163,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = youke/youke.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WJ9HX8X6DP;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1131,8 +1177,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/youke/Classes/other/Lib\"";
-				PRODUCT_BUNDLE_IDENTIFIER = com.m2micro.youke;
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SRCROOT)/youke/Classes/other/Lib\"",
+					"$(PROJECT_DIR)/youke/Classes/other/Lib/JPush/Lib",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.m2micro.youke2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "youke/Classes/other/youke-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;

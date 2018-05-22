@@ -44,9 +44,104 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //UINavigationBar.appearance().tintColor = UIColor.red
         window?.backgroundColor = UIColor.white
        AMapServices.shared().apiKey = APIKey
+        //极光推送;
+        
+        JPUSHService.register(forRemoteNotificationTypes: (UIUserNotificationType.badge.union(UIUserNotificationType.sound).union(UIUserNotificationType.alert)).rawValue, categories:nil)
+        
+        
+        JPUSHService.setup(withOption: launchOptions, appKey:"6d92d607e495ec154c1a9c17", channel:"", apsForProduction:true)
+        
+        
+        //        let center : UNUserNotificationCenter = UNUserNotificationCenter
+        //注册一个通知，我们从通知拿到registID
+        NotificationCenter.default.addObserver(self, selector: #selector(AppDelegate.self.networkDidLogin(notification:)), name: NSNotification.Name.jpfNetworkDidLogin, object: nil)
+        return true
+        
+        
+        
        return true
     }
+    
+    
+    //在这里拿到divieToken 向极光注册拿到registID;拿到registID后可能需要上传到您的应用服务器，
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        
+        print("divceToken"+"\(deviceToken)");
+        
+        JPUSHService.registerDeviceToken(deviceToken)
+        
+        
+    }
 
+    
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        
+        
+        print("接到通知")
+        
+        JPUSHService.handleRemoteNotification(userInfo)
+        
+        application.applicationIconBadgeNumber=0
+        
+        JPUSHService.resetBadge()
+        
+        if(application.applicationState == .active) {
+            
+            //在前台活动do nothing
+            
+            let alertView = UIAlertView(title: "消息", message: "您有一条新的消息", delegate: self as! UIAlertViewDelegate, cancelButtonTitle: "取消", otherButtonTitles: "查看")
+            
+            alertView.show()
+            
+        }else{
+            
+            //后台或者没有活动
+            
+        }
+        
+        
+        
+        
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    ////
+    @objc public func networkDidLogin(notification:NSNotification){
+        
+        if (JPUSHService.registrationID() != nil) {
+            
+            
+            let str:String = JPUSHService.registrationID()
+            
+            print("registId:"+str);
+            
+            if UserAccount.isLogin() {
+                
+                //saveDivce(registid: str)
+            }
+            
+            
+            
+        }
+        
+        
+        
+    }
+    
+    
     func applicationWillResignActive(_ application: UIApplication) {
        
     }

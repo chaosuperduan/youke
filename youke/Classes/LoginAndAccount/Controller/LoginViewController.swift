@@ -24,11 +24,23 @@ class LoginViewController: UIViewController {
         
         NetworkTools.requestData(.post, URLString: "http://192.168.0.222:8080/Maxwell/login/loginUser", parameters: param as? [String : Any]) { (response,mes) in
             print(response)
-            let account = UserAccount.init(dic: response["data"] as! [String : AnyObject])
-            account.user_Pwd = self.pwTF.text
-            account.savaAccout()
-            self.callBack!()
-           self.dismiss(animated: true, completion: nil)
+            if  response == nil{
+                
+                return
+                
+                
+            }else{
+                
+                let account = UserAccount.init(dic: response!["data"] as! [String : AnyObject])
+                
+                account.user_Pwd = self.pwTF.text
+                account.savaAccout()
+                self.callBack!()
+                self.dismiss(animated: true, completion: nil)
+                
+                
+            }
+            
         }
     }
     override func viewDidLoad() {
@@ -53,7 +65,6 @@ extension LoginViewController:UITextFieldDelegate{
     func textFieldDidBeginEditing(_ textField: UITextField) {
         UIView.animate(withDuration: 0.5) {
             self.view.frame.origin.y = -200
-            
         }
     }
     

@@ -47,41 +47,80 @@ class MineViewController: UIViewController {
         
         let param = NSMutableDictionary()
         let account = UserAccount.loadUserAccount()
-        
+       /*
         //param["phone_Number"] = account?.phone_Number
-        param["nick_Name"] = "振轩"
-        //param["token"] = account?.token
+       //param["phone_Number"] = "18573436532"
+         
+         
+         
+  
+
+        param["user_Name"] = "kawasiki"
+        param["nick_Name"] = "ccTT"
+        param["token"] = account?.token
+        param["role_Id"] = 9//account?.user_Id
+        //param["gender"] = "test1"
+       
         param["user_Id"] = account?.user_Id
-        //param["gender"] = "男"
+        */
+       
+        //param["phone_Number"] = "18573436532"
+        
+        
+       /* param["user_Name"] = "kawasiki"
+        param["nick_Name"] = "ccTT"
+        param["token"] = account?.token
+        param["role_Id"] = 9//account?.user_Id
+        */
+         /*   {
+                "age": 25,
+                "balance": 0,
+                
+                "isdeleted": 0,
+                
+                
+                "reg_Date": 1525595721000,
+                "role_Id": 9,
+                "token": "YgGUKOnyHx4DCKDF7x",
+                "user_Id": 5,
+                "user_Name": "test1",
+                "user_Pwd": "E10ADC3949BA59ABBE56E057F20F883E"
+        }
+        */
+        param["token"] = "YgGUKOnyHx4DCKDF7x"
+        param["role_Id"] = 9//account?.user_Id
+        param["user_Id"] = 5
+        
         let jsonStr:String = String.getJSONStringFromDictionary(dictionary: param)
         let paramJson = NSMutableDictionary()
+        //print(jsonStr)
         paramJson["userInfo"] = jsonStr
-        paramJson["token"] = account?.token
+        paramJson["token"] = "YgGUKOnyHx4DCKDF7x"
         
         
-        
+        //account?.token
+        print(jsonStr)
         self.showCanEdit(true) { (image) in
             
             self.iconImageView.image = image
-            
             guard let imageData = UIImagePNGRepresentation(image!) else {
                 return
             }
 
-            
             let str :String = imageData.base64EncodedString()
             
             print("++++++")
-            //print(str)
+           // print(str)
             print("++++++")
             
-            //paramJson["picture"] = str
+          paramJson["picture"] = str
             
             //            NetworkTools.upLoadImageRequest(urlString: "http://192.168.0.222:8080/Maxwell/userInfo/update/user", params: paramJson as! [String : String], data: datas, name: ["1234.png"], success: { (response) in
 //
 //            }, failture: { (error) in
 //
 //            })
+            
             NetworkTools.requestData(.post, URLString: "http://192.168.0.222:8080/Maxwell/userInfo/update/user", parameters: paramJson as! [String : Any], finishedCallback: { (response, msg) in
                 
             })
