@@ -16,9 +16,7 @@ class LoginViewController: UIViewController {
     
     @IBAction func Login(_ sender: Any) {
         
-//        if PwTF.text != RePwTF.text{
-//
-//        }
+
         
         let param = NSMutableDictionary()
         param["userNum"] = PhoneTF.text
@@ -28,9 +26,7 @@ class LoginViewController: UIViewController {
             print(response)
             let account = UserAccount.init(dic: response["data"] as! [String : AnyObject])
             account.user_Pwd = self.pwTF.text
-            
             account.savaAccout()
-            
             self.callBack!()
            self.dismiss(animated: true, completion: nil)
         }

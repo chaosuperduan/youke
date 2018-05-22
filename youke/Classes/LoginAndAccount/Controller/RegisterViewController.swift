@@ -23,14 +23,12 @@ class RegisterViewController: UIViewController {
     var remainingSeconds: Int = 0 {
         willSet {
             sendButton.setTitle("(\(newValue)秒后重新获取)", for: .normal)
-            
             if newValue <= 0 {
                 sendButton.setTitle("重新获取验证码", for: .normal)
                 isCounting = false
             }
         }
     }
-    
     var isCounting = false {
         willSet {
             if newValue {
@@ -99,10 +97,12 @@ class RegisterViewController: UIViewController {
     @objc func sendButtonClick(_ sender: UIButton) {
         isCounting = true
         getIdentyCode()
+        
        // NSLog(<#T##format: String##String#>, <#T##args: CVarArg...##CVarArg#>)
         
         
         print("-----***_____")
+        
     }
     
     @objc func updateTime(_ timer: Timer) {
@@ -121,7 +121,5 @@ extension RegisterViewController{
     }
 }
 extension RegisterViewController:UITextFieldDelegate{
-    
-    
     
 }

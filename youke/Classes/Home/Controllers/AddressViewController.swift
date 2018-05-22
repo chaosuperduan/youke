@@ -11,7 +11,7 @@ class AddressViewController: UIViewController {
     
      var DataArray:[AMapPOI]! = [AMapPOI]()
     
-    var callBack1:((AMapPOI)->())?
+    var callBack:((AMapPOI)->())?
 
     var naviView:AddressNaviView={
         let view = AddressNaviView.LoadFromNib()
@@ -27,8 +27,6 @@ class AddressViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpUI()
-
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,18 +48,17 @@ extension AddressViewController{
         view.addSubview(naviView)
         naviView.callBack = {(text) in
             
-                    POISearchManager.sharedInstance.getPoiSearch(city: "深圳市", key: text, page: 1) { (response) in
-            
-                        self.DataArray = response.pois
-                        self.tableview.reloadData()
+            POISearchManager.sharedInstance.getPoiSearch(city: "深圳市", key: text, page: 1) { (response) in
+                self.DataArray = response.pois
+                self.tableview.reloadData()
                     }
         }
+        
         naviView.operation = {(status) in
             if status {
                 
             }else{
                self.navigationController?.popViewController(animated: true)
-                
             }
         }
         view.addSubview(tableview)
@@ -89,15 +86,10 @@ extension AddressViewController:UITableViewDataSource,UITableViewDelegate{
         
         return cell
     }
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         let poi = self.DataArray[indexPath.row]
-        
-        if self.callBack1 != nil  {
-            
-            
-            callBack1!(poi)
+        if self.callBack != nil  {
+            callBack!(poi)
             self.dismiss(animated: true, completion: nil)
         }
     }

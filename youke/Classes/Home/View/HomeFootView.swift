@@ -24,27 +24,21 @@ class HomeFootView: UIView {
     @IBOutlet weak var priceTF: UITextField!
     var callBak:(()->())?
     var operationBlock:((methodOP,String,@escaping PassBak)->())?
-    
-    
     class func LoadView()->HomeFootView{
     let view:HomeFootView  = Bundle.main.loadNibNamed("HomeFootView", owner: nil, options: nil)!.first as! HomeFootView
         return view
-        
     }
   
     @IBAction func addressClick(_ sender: Any) {
         
         self.operationBlock!(methodOP.address,"在的",{ str in
-            
             self.addressBtn.setTitle(str, for: .normal)
             
             })
-        
     }
     
     @IBAction func startTimeClick(_ sender: Any) {
-        
-        
+        //self.priceTF.resignFirstResponder()
     }
     @IBAction func endTimeClick(_ sender: Any) {
         
@@ -54,6 +48,10 @@ class HomeFootView: UIView {
 extension HomeFootView:UITextFieldDelegate{
     func textFieldDidBeginEditing(_ textField: UITextField) {
         
+//        self.operationBlock!(methodOP.address,"在的",{ str in
+//            self.addressBtn.setTitle(str, for: .normal)
+//            
+//        })
         
     }
 }

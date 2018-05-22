@@ -91,14 +91,14 @@ class UserAccount: NSObject,NSCoding {
     
     class func loadUserAccount()->UserAccount?{
         //判断是否加载过。
-        if UserAccount.account != nil{
-            
-            
-            return UserAccount.account
-            
-            
-            
-        }
+//        if UserAccount.account != nil{
+//
+//
+//            return UserAccount.account
+//
+//            
+//
+//        }
         
         guard let account = NSKeyedUnarchiver.unarchiveObject(withFile: UserAccount.filePath) as? UserAccount else
         {

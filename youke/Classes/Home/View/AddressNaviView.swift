@@ -31,9 +31,9 @@ class AddressNaviView: UIView,NibLoad {
     @objc func textFieldDidChange(){
         
         print(searchTF.text ?? "00")
+        
+        
         callBack!(searchTF.text!)
-        
-        
     }
     
     @IBAction func CitySelect(_ sender: Any) {

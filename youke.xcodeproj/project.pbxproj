@@ -341,6 +341,7 @@
 		59F4BE6620AA7C3F003434A9 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				E504E07420B3F4CF00AC25B3 /* JPush */,
 				59F4BE7620AA896C003434A9 /* AMapLocationKit.framework */,
 				59F4BE6F20AA7E39003434A9 /* AMap.bundle */,
 				59F4BE6720AA7C3F003434A9 /* AMapFoundationKit.framework */,
@@ -426,6 +427,13 @@
 				355FDBE30CB39132BAC344F0 /* Pods_youke.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E504E07420B3F4CF00AC25B3 /* JPush */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = JPush;
 			sourceTree = "<group>";
 		};
 		E508370420A5F77100B384A2 /* Classes */ = {

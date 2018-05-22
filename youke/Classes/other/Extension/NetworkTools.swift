@@ -21,8 +21,13 @@ class NetworkTools {
         // 2.发送网络请求
         Alamofire.request(URLString, method: method, parameters: parameters).responseJSON { (response) in
             // 3.获取结果
+            
+            
             guard let result = response.result.value else {
+                print("-----")
+                
                 print(response.result.error ?? "")
+                print("-----")
                 return
             }
             //处理Unicode编码。将unicode编码的json转成uft8编码
@@ -31,11 +36,15 @@ class NetworkTools {
             }
             let utf8Text = String(data: data , encoding: .utf8)
             print(utf8Text ?? "编码错误")
+            
+            
             guard  let respObj :[String:AnyObject] = result as? [String : AnyObject] else{
                 return
             }
+            print(respObj)
             
             let code:Int = respObj["code"] as! Int
+            
             if code == 200 {
                 finishedCallback(respObj,respObj["msg"] as? String)
                 
@@ -45,5 +54,72 @@ class NetworkTools {
             // 4.将结果回调出去
             finishedCallback(respObj , nil)
         }
+    }
+    
+    //上传图片；
+    
+    
+    
+    
+    class func upLoadImageRequest(urlString : String, params:[String:String], data: [Data], name: [String],success : @escaping (_ response : [String : AnyObject])->(), failture : @escaping (_ error : Error)->()){
+        
+        let headers = ["content-type":"multipart/form-data"]
+        Alamofire.upload(
+            multipartFormData: { multipartFormData in
+                //666多张图片上传
+                let flag = params["userInfo"]
+                
+                
+                //let userId = params["userId"]
+                //multipartFormData.append(flag?.data(using: String.Encoding.utf8), withName: ""),
+                multipartFormData.append((flag?.data(using: String.Encoding.utf8)!)!, withName: "userInfo")
+                //                multipartFormData.append( (userId?.data(using: String.Encoding.utf8)!)!, withName: "userId")
+                
+                
+                
+                for i in 0..<data.count {
+                    
+                    let baseData = data[i].base64EncodedString()
+                    print(baseData)
+                    
+                    
+                    
+                   // let str = String.init(data: baseData, encoding: String.Encoding.utf8)
+                    
+                    
+                   // multipartFormData.append(baseData, withName: "picture", fileName: name[i], mimeType: "image/png")
+                    //multipartFormData.a
+                    //multipartFormData.append(baseData, withName: "picture", mimeType: "image/png")
+                }
+        },
+            to: urlString,
+            method: .post,
+            headers: headers,
+            encodingCompletion: { encodingResult in
+                switch encodingResult {
+                case .success(let upload, _, _):
+                    upload.responseJSON { response in
+                        if let value = response.result.value as? [String: AnyObject]{
+                            success(value)
+                            
+                            print(value)
+                        }
+                        
+                        print("响应请求:"+"\response.response?.statusCode")
+                        guard  let data = response.data  else{
+                            return
+                        }
+                       let utf8Text = String(data: data , encoding: .utf8)
+                        print("照片上传返回:"+utf8Text!)
+                    }
+                case .failure(let encodingError):
+                    print(encodingError);
+                    
+                    failture(encodingError)
+                    
+                }
+        }
+        )
+       
     }
 }

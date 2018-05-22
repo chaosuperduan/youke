@@ -17,7 +17,6 @@ class MineViewController: UIViewController {
     var isLogin:Bool?{
         didSet{
             if isLogin!  {
-                
                 let a = UserAccount.loadUserAccount()
                 nameLabel.text = UserAccount.account?.nick_Name! as! String
                 loginBTN.setTitle("退出登录", for: .normal)
@@ -25,9 +24,6 @@ class MineViewController: UIViewController {
             }
         }
     }
-    
-    
-    
     
     var titleArray = ["个人资料","修改密码","实名认证","我的订单","我的消息","关于我们"]
     
@@ -43,20 +39,53 @@ class MineViewController: UIViewController {
     }
     
     
-
+//[1]    (null)    "token" : "Pn723THf8kTbeF1ywv"
   
     @IBOutlet weak var loadImageView: UIButton!
     
     @IBAction func loadImage(_ sender: Any) {
         
+        let param = NSMutableDictionary()
+        let account = UserAccount.loadUserAccount()
+        
+        //param["phone_Number"] = account?.phone_Number
+        param["nick_Name"] = "振轩"
+        //param["token"] = account?.token
+        param["user_Id"] = account?.user_Id
+        //param["gender"] = "男"
+        let jsonStr:String = String.getJSONStringFromDictionary(dictionary: param)
+        let paramJson = NSMutableDictionary()
+        paramJson["userInfo"] = jsonStr
+        paramJson["token"] = account?.token
+        
+        
         
         self.showCanEdit(true) { (image) in
+            
             self.iconImageView.image = image
             
+            guard let imageData = UIImagePNGRepresentation(image!) else {
+                return
+            }
+
             
+            let str :String = imageData.base64EncodedString()
+            
+            print("++++++")
+            //print(str)
+            print("++++++")
+            
+            //paramJson["picture"] = str
+            
+            //            NetworkTools.upLoadImageRequest(urlString: "http://192.168.0.222:8080/Maxwell/userInfo/update/user", params: paramJson as! [String : String], data: datas, name: ["1234.png"], success: { (response) in
+//
+//            }, failture: { (error) in
+//
+//            })
+            NetworkTools.requestData(.post, URLString: "http://192.168.0.222:8080/Maxwell/userInfo/update/user", parameters: paramJson as! [String : Any], finishedCallback: { (response, msg) in
+                
+            })
         }
-        
-        
     }
     
     
@@ -133,10 +162,8 @@ extension MineViewController:UITableViewDataSource,UITableViewDelegate{
          do {
            let nav = UINavigationController(rootViewController: MessageTableViewController())
            self.present(nav, animated: true, completion: nil)
-        
-         }
+        }
         break
-        
         default:
             break
         
