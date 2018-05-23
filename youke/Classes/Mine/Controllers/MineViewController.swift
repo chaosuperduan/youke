@@ -102,18 +102,18 @@ class MineViewController: UIViewController {
         print(jsonStr)
         self.showCanEdit(true) { (image) in
             
-            self.iconImageView.image = image
+            self.iconImageView.image = UIImage.init(named: "活动")
             guard let imageData = UIImagePNGRepresentation(image!) else {
                 return
             }
 
-            let str :String = imageData.base64EncodedString()
-            
+            let str = imageData.base64EncodedData()
             print("++++++")
-           // print(str)
+           //print(str)
             print("++++++")
             
           paramJson["picture"] = str
+          
             
             //            NetworkTools.upLoadImageRequest(urlString: "http://192.168.0.222:8080/Maxwell/userInfo/update/user", params: paramJson as! [String : String], data: datas, name: ["1234.png"], success: { (response) in
 //

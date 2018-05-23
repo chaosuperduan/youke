@@ -26,7 +26,7 @@
                   moduleName = "youke"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/keelon/Documents/GitHub/youke/youke/Classes/LoginAndAccount/Controller/RegisterViewController.swift"
-                  timestampString = "548687821.553272"
+                  timestampString = "548691018.67021"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "71"
@@ -41,7 +41,7 @@
                   moduleName = "youke"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/keelon/Documents/GitHub/youke/youke/Classes/LoginAndAccount/Controller/RegisterViewController.swift"
-                  timestampString = "548687821.555819"
+                  timestampString = "548691018.67532"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "72"
@@ -49,22 +49,6 @@
                   offsetFromSymbolStart = "59">
                </Location>
             </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "youke/Classes/Mine/Controllers/MineViewController.swift"
-            timestampString = "548687821.251375"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "125"
-            endingLineNumber = "125"
-            landmarkName = "loadImage(_:)"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
