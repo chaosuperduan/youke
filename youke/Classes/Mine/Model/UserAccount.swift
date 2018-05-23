@@ -19,6 +19,8 @@ class UserAccount: NSObject,NSCoding {
    @objc var age : NSNumber?
    @objc var phone_Number:String?
    @objc var user_Pwd:String?
+   @objc var registId:String?
+    
 
     ///  用户头像地址（大图），180×180像素
     var avatar_large: String?
@@ -31,12 +33,9 @@ class UserAccount: NSObject,NSCoding {
     
     
     //生命周期的方法。
-    
-    init(dic:[String:AnyObject]) {
+   init(dic:[String:AnyObject]) {
         super.init()
-
-
-       self.setValuesForKeys(dic)
+        self.setValuesForKeys(dic)
     }
     override func setValue(_ value: Any?, forUndefinedKey key: String) {
         
@@ -62,6 +61,8 @@ class UserAccount: NSObject,NSCoding {
         aCoder.encode(nick_Name, forKey: "nick_Name")
         aCoder.encode(screen_name, forKey: "screen_name")
         aCoder.encode(user_Pwd, forKey: "user_Pwd")
+         aCoder.encode(user_Pwd, forKey: "registId")
+        
         
     }
     required init?(coder aDecoder: NSCoder) {
@@ -76,6 +77,7 @@ class UserAccount: NSObject,NSCoding {
         self.avatar_large = aDecoder.decodeObject(forKey: "avatar_large") as? String
         self.screen_name = aDecoder.decodeObject(forKey: "screen_name") as? String
         self.user_Pwd = aDecoder.decodeObject(forKey: "user_Pwd") as? String
+        self.user_Pwd = aDecoder.decodeObject(forKey: "registId") as? String
         
     }
     func savaAccout()->Bool{

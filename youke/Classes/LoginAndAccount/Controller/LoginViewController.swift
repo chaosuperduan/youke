@@ -32,7 +32,6 @@ class LoginViewController: UIViewController {
             }else{
                 
                 let account = UserAccount.init(dic: response!["data"] as! [String : AnyObject])
-                
                 account.user_Pwd = self.pwTF.text
                 account.savaAccout()
                 self.callBack!()
@@ -51,6 +50,7 @@ class LoginViewController: UIViewController {
 
     @IBAction func back(_ sender: Any) {
         dismiss(animated: true, completion: nil)
+        
     }
     
     

@@ -5,7 +5,6 @@
 //  Created by Duan Chao on 2018/5/16.
 //  Copyright © 2018年 M2Micro. All rights reserved.
 //
-
 import UIKit
 
 class AddressNaviView: UIView,NibLoad {
@@ -43,7 +42,6 @@ class AddressNaviView: UIView,NibLoad {
     }
     
     @IBAction func Cancel(_ sender: Any) {
-        
         if operation != nil {
             operation!(false)
         }

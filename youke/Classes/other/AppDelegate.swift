@@ -56,11 +56,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //注册一个通知，我们从通知拿到registID
         NotificationCenter.default.addObserver(self, selector: #selector(AppDelegate.self.networkDidLogin(notification:)), name: NSNotification.Name.jpfNetworkDidLogin, object: nil)
         return true
-        
-        
-        
-       return true
-    }
+     }
     
     
     //在这里拿到divieToken 向极光注册拿到registID;拿到registID后可能需要上传到您的应用服务器，
@@ -69,7 +65,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print("divceToken"+"\(deviceToken)");
         
         JPUSHService.registerDeviceToken(deviceToken)
-        
         
     }
 
@@ -108,17 +103,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    ////
     @objc public func networkDidLogin(notification:NSNotification){
         
         if (JPUSHService.registrationID() != nil) {
@@ -128,17 +112,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             print("registId:"+str);
             
-            if UserAccount.isLogin() {
-                
-                //saveDivce(registid: str)
-            }
-            
-            
-            
-        }
-        
-        
-        
+//            if (UserAccount.isLogin() && str != nil) {
+//                
+//                
+//                let  account:UserAccount =  UserAccount.loadUserAccount()!
+//                
+//                account.registId = str
+//                 account.savaAccout()
+//              }
+       }
     }
     
     

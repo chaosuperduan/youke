@@ -19,6 +19,10 @@ class NetworkTools {
         // 1.获取类型
         let method = type == .get ? HTTPMethod.get : HTTPMethod.post
         // 2.发送网络请求
+        let a = parameters!
+        
+        
+        
         Alamofire.request(URLString, method: method, parameters: parameters).responseJSON { (response) in
             // 3.获取结果
             

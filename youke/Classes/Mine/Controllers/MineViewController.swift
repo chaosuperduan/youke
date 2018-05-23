@@ -87,15 +87,17 @@ class MineViewController: UIViewController {
                 "user_Pwd": "E10ADC3949BA59ABBE56E057F20F883E"
         }
         */
-        param["token"] = "YgGUKOnyHx4DCKDF7x"
-        param["role_Id"] = 9//account?.user_Id
-        param["user_Id"] = 5
+        param["token"] = account?.token
+        param["role_Id"] = account?.role_Id
+        param["user_Id"] = account?.user_Id
+        param["user_Name"] = "HONDA"
+        
         
         let jsonStr:String = String.getJSONStringFromDictionary(dictionary: param)
         let paramJson = NSMutableDictionary()
-        //print(jsonStr)
+        print(jsonStr)
         paramJson["userInfo"] = jsonStr
-        paramJson["token"] = "YgGUKOnyHx4DCKDF7x"
+        paramJson["token"] = "fHEsstNjUJNKdoNIJp"//account?.token
         
         
         //account?.token
@@ -107,21 +109,15 @@ class MineViewController: UIViewController {
                 return
             }
 
-            let str = imageData.base64EncodedData()
+            let str = imageData.base64EncodedString()
             print("++++++")
            //print(str)
             print("++++++")
             
-          paramJson["picture"] = str
-          
+           paramJson["picture"] = str
             
-            //            NetworkTools.upLoadImageRequest(urlString: "http://192.168.0.222:8080/Maxwell/userInfo/update/user", params: paramJson as! [String : String], data: datas, name: ["1234.png"], success: { (response) in
-//
-//            }, failture: { (error) in
-//
-//            })
             
-            NetworkTools.requestData(.post, URLString: "http://192.168.0.222:8080/Maxwell/userInfo/update/user", parameters: paramJson as! [String : Any], finishedCallback: { (response, msg) in
+           NetworkTools.requestData(.post, URLString: "http://192.168.0.222:8080/Maxwell/userInfo/update/user", parameters: paramJson as? [String : Any], finishedCallback: { (response, msg) in
                 
             })
         }
